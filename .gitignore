@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.turbo/
+# The gateway bundle is a committed deliverable; other build output is not.
+packages/*/dist/
+!packages/gateway/dist/
+packages/gateway/dist/*
+!packages/gateway/dist/server.mjs
