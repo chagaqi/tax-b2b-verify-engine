@@ -1,0 +1,10 @@
+{
+  "name": "tax-verify-card",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependencies installed by the HubSpot CLI when building the card.",
+  "dependencies": {
+    "@hubspot/ui-extensions": "^0.17.1",
+    "react": "18.3.1"
+  }
+}

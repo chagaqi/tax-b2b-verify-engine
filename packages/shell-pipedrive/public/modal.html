@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verify tax ID</title>
+<style>
+:root{--bg:#fff;--ink:#192435;--muted:#65708a;--line:#d8dde6;--accent:#317ae2;--ok:#08a742;--warn:#c47f00;--bad:#e3343f;color-scheme:light}
+:root[data-theme="dark"]{--bg:#1b1f26;--ink:#e8ebf0;--muted:#9aa4b5;--line:#343b47;--accent:#5b9bf8;--ok:#3cc56f;--warn:#f0b44c;--bad:#ff6b6b;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif}
+main{padding:16px}form{display:grid;gap:10px}label{display:grid;gap:4px;font-size:12px;color:var(--muted)}
+input[type=text]{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr 90px;gap:10px}.check{display:flex;gap:6px;align-items:center;color:var(--ink);font-size:13px}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}button{font:inherit;padding:7px 14px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}button:disabled{opacity:.6;cursor:wait}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;color:#fff;font-weight:600;font-size:12px}.ok{background:var(--ok)}.warn{background:var(--warn)}.bad{background:var(--bad)}.info{background:var(--accent)}
+dl{display:grid;grid-template-columns:130px 1fr;gap:4px 10px;margin:10px 0 0}dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}.err{color:var(--bad);font-weight:600}
+#result:empty{display:none}#result{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@pipedrive/app-extensions-sdk@0.16.1/dist/index.umd.js" integrity="sha384-szRF+blsKwxw3jA53SBYux8hXYlQNwePRAYfR0PXjlIZ8l1XMjWL4/dfH36SDTbJ" crossorigin="anonymous"></script>
+<script type="module" src="./modal.js"></script>
+</head>
+<body>
+<main>
+  <form id="verify-form" novalidate>
+    <div class="row">
+      <label>VAT / tax ID<input type="text" id="taxId" required maxlength="64" autocomplete="off" placeholder="e.g. DE136695976"></label>
+      <label>Country<input type="text" id="country" maxlength="2" placeholder="auto"></label>
+    </div>
+    <label>Company domain (optional)<input type="text" id="domain" maxlength="253" placeholder="acme.com"></label>
+    <label class="check"><input type="checkbox" id="certificate" checked> Generate signed audit certificate (PDF)</label>
+    <div class="actions">
+      <button type="button" id="close">Close</button>
+      <button type="submit" class="primary" id="submit">Verify</button>
+    </div>
+  </form>
+  <section id="result" aria-live="polite"></section>
+</main>
+</body>
+</html>

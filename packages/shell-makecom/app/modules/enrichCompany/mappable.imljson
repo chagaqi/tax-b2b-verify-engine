@@ -1,0 +1,15 @@
+[
+  {
+    "name": "email",
+    "type": "email",
+    "label": "Email",
+    "required": false,
+    "help": "Provide an email or a domain."
+  },
+  {
+    "name": "domain",
+    "type": "text",
+    "label": "Domain",
+    "required": false
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "url": "/v1/countries",
+  "method": "GET",
+  "response": {
+    "iterate": "{{body.jurisdictions}}",
+    "output": {
+      "label": "{{item.countryName}} — {{item.schemeName}}",
+      "value": "{{item.code}}"
+    }
+  }
+}

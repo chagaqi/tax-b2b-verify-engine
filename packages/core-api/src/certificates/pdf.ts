@@ -1,3 +1,4 @@
+/// <reference path="../types/qrcode-core.d.ts" />
 import { PDFDocument, StandardFonts, degrees, rgb, type PDFFont, type PDFPage, type RGB } from 'pdf-lib';
 import { create as createQr } from 'qrcode/lib/core/qrcode.js';
 import type { Verdict } from '../verify/service.js';

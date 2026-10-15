@@ -1,0 +1,56 @@
+[
+  {
+    "name": "taxId",
+    "type": "text",
+    "label": "Tax / VAT ID",
+    "required": true,
+    "help": "Any format: `DE 136 695 976`, `EL094259216`, `04-3341285`…"
+  },
+  {
+    "name": "country",
+    "type": "select",
+    "label": "Country",
+    "required": false,
+    "options": "rpc://listCountries",
+    "help": "Leave empty for numbers with a VAT prefix (DE…, FR…, XI…). Required for US EIN, AU ABN, etc."
+  },
+  {
+    "name": "liveLookup",
+    "type": "boolean",
+    "label": "Check EU VIES registry",
+    "default": true,
+    "required": false
+  },
+  {
+    "name": "certificate",
+    "type": "boolean",
+    "label": "Generate signed audit certificate PDF",
+    "default": false,
+    "required": false
+  },
+  {
+    "name": "companyName",
+    "type": "text",
+    "label": "Company name (printed on the certificate)",
+    "required": false
+  },
+  {
+    "name": "email",
+    "type": "email",
+    "label": "Contact email (for domain enrichment)",
+    "required": false
+  },
+  {
+    "name": "domain",
+    "type": "text",
+    "label": "Company domain (for domain enrichment)",
+    "required": false
+  },
+  {
+    "name": "enrich",
+    "type": "boolean",
+    "label": "Also enrich the email/domain",
+    "default": false,
+    "required": false
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "name": "domain",
+    "type": "text",
+    "label": "Domain"
+  },
+  {
+    "name": "classification",
+    "type": "text",
+    "label": "Classification"
+  },
+  {
+    "name": "freeProvider",
+    "type": "boolean",
+    "label": "Free mailbox provider"
+  },
+  {
+    "name": "disposable",
+    "type": "collection",
+    "label": "Disposable",
+    "spec": [
+      {
+        "name": "value",
+        "type": "boolean",
+        "label": "Is disposable"
+      },
+      {
+        "name": "reason",
+        "type": "text",
+        "label": "Reason"
+      }
+    ]
+  },
+  {
+    "name": "dns",
+    "type": "collection",
+    "label": "DNS",
+    "spec": [
+      {
+        "name": "resolves",
+        "type": "boolean",
+        "label": "Resolves"
+      },
+      {
+        "name": "mailProvider",
+        "type": "text",
+        "label": "Mail provider"
+      },
+      {
+        "name": "nullMx",
+        "type": "boolean",
+        "label": "Null MX"
+      }
+    ]
+  },
+  {
+    "name": "security",
+    "type": "collection",
+    "label": "Email security",
+    "spec": [
+      {
+        "name": "score",
+        "type": "number",
+        "label": "Score"
+      },
+      {
+        "name": "grade",
+        "type": "text",
+        "label": "Grade"
+      },
+      {
+        "name": "findings",
+        "type": "array",
+        "label": "Findings",
+        "spec": {
+          "type": "text"
+        }
+      }
+    ]
+  },
+  {
+    "name": "registration",
+    "type": "collection",
+    "label": "Registration (RDAP)",
+    "spec": [
+      {
+        "name": "registrar",
+        "type": "text",
+        "label": "Registrar"
+      },
+      {
+        "name": "registeredAt",
+        "type": "date",
+        "label": "Registered"
+      },
+      {
+        "name": "ageDays",
+        "type": "number",
+        "label": "Age (days)"
+      }
+    ]
+  },
+  {
+    "name": "company",
+    "type": "collection",
+    "label": "Company",
+    "spec": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+      },
+      {
+        "name": "legalName",
+        "type": "text",
+        "label": "Legal name"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+      },
+      {
+        "name": "logo",
+        "type": "url",
+        "label": "Logo"
+      }
+    ]
+  },
+  {
+    "name": "email",
+    "type": "collection",
+    "label": "Email",
+    "spec": [
+      {
+        "name": "address",
+        "type": "email",
+        "label": "Address"
+      },
+      {
+        "name": "isRole",
+        "type": "boolean",
+        "label": "Role account"
+      },
+      {
+        "name": "deliverability",
+        "type": "text",
+        "label": "Deliverability"
+      }
+    ]
+  },
+  {
+    "name": "risk",
+    "type": "collection",
+    "label": "Risk",
+    "spec": [
+      {
+        "name": "score",
+        "type": "number",
+        "label": "Score"
+      },
+      {
+        "name": "level",
+        "type": "text",
+        "label": "Level"
+      },
+      {
+        "name": "reasons",
+        "type": "array",
+        "label": "Reasons",
+        "spec": {
+          "type": "text"
+        }
+      }
+    ]
+  }
+]

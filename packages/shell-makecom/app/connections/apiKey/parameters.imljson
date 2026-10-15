@@ -1,0 +1,9 @@
+[
+  {
+    "name": "apiKey",
+    "type": "password",
+    "label": "API key",
+    "required": true,
+    "help": "Create a free key with `POST https://verify.taxb2b.app/v1/install` (body `{\"platform\":\"makecom\"}`) or from the playground. Keys look like `tbv_live_…`."
+  }
+]

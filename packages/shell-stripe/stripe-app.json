@@ -1,0 +1,36 @@
+{
+  "id": "com.taxb2bverify.app",
+  "version": "1.0.0",
+  "name": "Tax ID Verify & VAT Audit",
+  "icon": "./icon.png",
+  "permissions": [
+    {
+      "permission": "customer_read",
+      "purpose": "Read the customer's tax IDs, email and billing country so they can be verified against EU VIES and national checksum rules."
+    },
+    {
+      "permission": "customer_write",
+      "purpose": "Optionally save the verification status and certificate link to the customer's metadata when you click \"Save to customer\"."
+    }
+  ],
+  "ui_extension": {
+    "views": [
+      {
+        "viewport": "stripe.dashboard.customer.detail",
+        "component": "CustomerVerifyView"
+      }
+    ],
+    "content_security_policy": {
+      "connect-src": [
+        "https://verify.taxb2b.app/v1/integrations/stripe/"
+      ],
+      "image-src": null,
+      "purpose": "Sends the customer's tax ID and email domain to the Tax ID Verify API, which checks EU VIES, check digits and DNS records and returns a signed audit certificate."
+    }
+  },
+  "constants": {
+    "API_BASE": "https://verify.taxb2b.app"
+  },
+  "distribution_type": "public",
+  "sandbox_install_compatible": true
+}

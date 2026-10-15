@@ -1,0 +1,191 @@
+{
+  "actionUrl": "https://verify.taxb2b.app/v1/integrations/hubspot/workflow-action",
+  "isPublished": true,
+  "supportedClients": [
+    {
+      "client": "WORKFLOWS"
+    }
+  ],
+  "objectTypes": [
+    "COMPANY",
+    "CONTACT"
+  ],
+  "inputFields": [
+    {
+      "typeDefinition": {
+        "name": "tax_id",
+        "type": "string",
+        "fieldType": "text"
+      },
+      "supportedValueTypes": [
+        "OBJECT_PROPERTY",
+        "STATIC_VALUE"
+      ],
+      "isRequired": true
+    },
+    {
+      "typeDefinition": {
+        "name": "country",
+        "type": "string",
+        "fieldType": "text"
+      },
+      "supportedValueTypes": [
+        "OBJECT_PROPERTY",
+        "STATIC_VALUE"
+      ],
+      "isRequired": false
+    },
+    {
+      "typeDefinition": {
+        "name": "generate_certificate",
+        "type": "enumeration",
+        "fieldType": "select",
+        "options": [
+          {
+            "value": "true",
+            "label": "Yes"
+          },
+          {
+            "value": "false",
+            "label": "No"
+          }
+        ]
+      },
+      "supportedValueTypes": [
+        "STATIC_VALUE"
+      ],
+      "isRequired": false
+    }
+  ],
+  "outputFields": [
+    {
+      "typeDefinition": {
+        "name": "verification_status",
+        "type": "enumeration",
+        "options": [
+          {
+            "value": "registry_verified",
+            "label": "Verified in EU VIES"
+          },
+          {
+            "value": "registry_not_found",
+            "label": "Not registered in VIES"
+          },
+          {
+            "value": "checksum_valid",
+            "label": "Valid check digit"
+          },
+          {
+            "value": "format_valid",
+            "label": "Valid format"
+          },
+          {
+            "value": "invalid",
+            "label": "Invalid"
+          },
+          {
+            "value": "missing_tax_id",
+            "label": "Missing tax ID"
+          },
+          {
+            "value": "quota_exceeded",
+            "label": "Quota exceeded"
+          }
+        ]
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "is_valid",
+        "type": "enumeration",
+        "options": [
+          {
+            "value": "true",
+            "label": "Yes"
+          },
+          {
+            "value": "false",
+            "label": "No"
+          }
+        ]
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "summary",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "normalized_tax_id",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "country_code",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "registered_name",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "registered_address",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "registry_status",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "checked_at",
+        "type": "string"
+      }
+    },
+    {
+      "typeDefinition": {
+        "name": "certificate_url",
+        "type": "string"
+      }
+    }
+  ],
+  "labels": {
+    "en": {
+      "actionName": "Verify tax ID",
+      "actionDescription": "Checks the VAT / tax ID against EU VIES and national check-digit rules within HubSpot's 5-second callback window (falls back to the offline checksum if the registry is slow), writes the status to Tax ID properties and returns fields for later actions.",
+      "appDisplayName": "Tax ID Verify",
+      "actionCardContent": "Verify tax ID {{tax_id}}",
+      "inputFieldLabels": {
+        "tax_id": "Tax / VAT ID",
+        "country": "Country (ISO code, optional)",
+        "generate_certificate": "Generate audit certificate PDF"
+      },
+      "inputFieldDescriptions": {
+        "tax_id": "Usually a company property such as \"VAT number\".",
+        "country": "Needed for numbers without a country prefix (e.g. US EIN, AU ABN)."
+      },
+      "outputFieldLabels": {
+        "verification_status": "Verification status",
+        "is_valid": "Is valid",
+        "summary": "Summary",
+        "normalized_tax_id": "Normalized tax ID",
+        "country_code": "Country code",
+        "registered_name": "Registered name (VIES)",
+        "registered_address": "Registered address (VIES)",
+        "registry_status": "Registry status",
+        "checked_at": "Checked at (ISO 8601)",
+        "certificate_url": "Certificate verification URL"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "uid": "tax_verify_card",
+  "type": "card",
+  "config": {
+    "name": "Tax ID Verify",
+    "description": "Verify this record's VAT / tax ID and domain, and issue a signed audit certificate.",
+    "location": "crm.record.tab",
+    "entrypoint": "/app/cards/TaxVerifyCard.tsx",
+    "objectTypes": ["companies", "contacts"]
+  }
+}

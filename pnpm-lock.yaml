@@ -66,6 +66,9 @@ importers:
       '@tbve/shell-pipedrive':
         specifier: workspace:*
         version: link:../shell-pipedrive
+      hono:
+        specifier: ^4.13.13
+        version: 4.13.13
 
   packages/shell-hubspot:
     dependencies:

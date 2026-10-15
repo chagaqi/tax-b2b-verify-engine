@@ -1,0 +1,42 @@
+[
+  {
+    "name": "id",
+    "type": "text",
+    "label": "Certificate ID"
+  },
+  {
+    "name": "issuedAt",
+    "type": "date",
+    "label": "Issued at"
+  },
+  {
+    "name": "pdfUrl",
+    "type": "url",
+    "label": "Fresh PDF download URL"
+  },
+  {
+    "name": "pdfUrlExpiresAt",
+    "type": "date",
+    "label": "Download URL expires"
+  },
+  {
+    "name": "verifyUrl",
+    "type": "url",
+    "label": "Public verification URL"
+  },
+  {
+    "name": "pdfSha256",
+    "type": "text",
+    "label": "PDF SHA-256"
+  },
+  {
+    "name": "signature",
+    "type": "text",
+    "label": "Ed25519 signature"
+  },
+  {
+    "name": "keyId",
+    "type": "text",
+    "label": "Signing key ID"
+  }
+]
