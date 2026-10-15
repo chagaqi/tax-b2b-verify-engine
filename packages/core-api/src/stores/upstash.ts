@@ -98,6 +98,9 @@ export class UpstashCacheStore implements ICacheStore {
     const r = await this.redis.exec<string | null>(['SET', this.redis.key(`cache:${key}`), JSON.stringify(value), 'EX', ttlSeconds, 'NX']);
     return r === 'OK';
   }
+  async delete(key: string): Promise<void> {
+    await this.redis.exec(['DEL', this.redis.key(`cache:${key}`)]);
+  }
 }
 
 export class UpstashTenantStore implements ITenantStore {
@@ -114,7 +117,7 @@ export class UpstashTenantStore implements ITenantStore {
     if (prev?.apiKeyHash && prev.apiKeyHash !== tenant.apiKeyHash) cmds.push(['DEL', this.redis.key(`apikey:${prev.apiKeyHash}`)]);
     if (tenant.apiKeyHash) cmds.push(['SET', this.redis.key(`apikey:${tenant.apiKeyHash}`), tenant.id]);
     if (tenant.externalAccountId) {
-      cmds.push(['SET', this.redis.key(`ext:${tenant.platform}:${tenant.externalAccountId}`), tenant.id]);
+      cmds.push(['SET', this.redis.key(`ext:${tenant.platform}:${tenant.externalAccountId}`), tenant.id, 'NX']);
     }
     await this.redis.pipeline(cmds);
   }

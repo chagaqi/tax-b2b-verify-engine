@@ -39,6 +39,15 @@ export class TenantService {
     return this.store.put({ ...t, updatedAt: this.now().toISOString() });
   }
 
+  /** Apply a change to the *latest* stored record, so concurrent writers don't clobber each other's fields. */
+  async update(id: string, change: (current: Tenant) => Tenant): Promise<Tenant> {
+    const current = await this.store.get(id);
+    if (!current) throw new Error(`Tenant ${id} not found`);
+    const next = { ...change(current), updatedAt: this.now().toISOString() };
+    await this.store.put(next);
+    return next;
+  }
+
   /** Creates a tenant with an API key. The plaintext key is only ever returned here. */
   async createWithKey(input: { platform: Platform; name?: string; email?: string; externalAccountId?: string; plan?: PlanId }): Promise<{ tenant: Tenant; apiKey: string }> {
     const apiKey = this.newKey();
@@ -101,16 +110,16 @@ export class TenantService {
       ...(extra.email ? { email: extra.email } : {}),
     };
     await this.store.put(tenant);
-    return tenant;
+    // Two first requests can race; the external index is first-writer-wins, so return the winner.
+    return (await this.store.findByExternal(platform, accountId)) ?? tenant;
   }
 
   async storeTokens(tenant: Tenant, platform: Platform, tokens: OAuthTokens): Promise<Tenant> {
-    const next: Tenant = {
-      ...tenant,
-      integrations: { ...tenant.integrations, [platform]: { sealed: await seal(this.appSecret, JSON.stringify(tokens)), updatedAt: this.now().toISOString() } },
-    };
-    await this.save(next);
-    return next;
+    const sealed = await seal(this.appSecret, JSON.stringify(tokens));
+    return this.update(tenant.id, (t) => ({
+      ...t,
+      integrations: { ...t.integrations, [platform]: { sealed, updatedAt: this.now().toISOString() } },
+    }));
   }
 
   async readTokens(tenant: Tenant, platform: Platform): Promise<OAuthTokens | null> {

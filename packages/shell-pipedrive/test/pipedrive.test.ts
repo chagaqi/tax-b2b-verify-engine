@@ -80,7 +80,7 @@ describe('custom modal (headless)', () => {
     expect(executed.map(([c]) => c)).toEqual(['get_signed_token', 'show_snackbar', 'resize']);
     expect(executed[1]![1]).toMatchObject({ message: expect.stringContaining('active in EU VIES'), link: { label: 'Certificate' } });
     // The panel now shows the stored result for organization 12.
-    const token = await signHs256({ companyId: 900 }, 'pd-jwt-secret');
+    const token = await signHs256({ companyId: 900, iat: Math.floor(Date.now() / 1000) }, 'pd-jwt-secret');
     const panel = (await (await backend.request(`/v1/integrations/pipedrive/panel?resource=organization&selectedIds=12&token=${token}`)).json()) as { data: { header: string }[] };
     expect(panel.data[0]!.header).toBe('IE6388047V');
   });

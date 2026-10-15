@@ -6,8 +6,12 @@ export interface AppConfig {
   viesMode: 'live' | 'offline';
   viesTimeoutMs: number;
   viesRequesterVat?: string;
-  /** Trust X-Forwarded-For / CF-Connecting-IP for client IPs. */
-  trustProxy: boolean;
+  /**
+   * How to find the client IP behind proxies: `false` (socket address), `'cloudflare'`
+   * (CF-Connecting-IP), or N = number of trusted proxy hops appending to X-Forwarded-For
+   * (the client is the Nth entry from the right; leftmost entries are client-controlled).
+   */
+  trustProxy: false | 'cloudflare' | number;
   /** HubSpot workflow-action SLA budget (HubSpot times out callbacks at 5 s). */
   hubspotSlaMs: number;
   certificateRetentionDays: number;
@@ -39,11 +43,24 @@ const int = (v: string | undefined, d: number) => {
 };
 const opt = (v: string | undefined) => (v && v.trim() ? v.trim() : undefined);
 
+function parseTrustProxy(v: string | undefined): AppConfig['trustProxy'] {
+  const t = v?.trim().toLowerCase();
+  if (!t || t === 'false' || t === '0') return false;
+  if (t === 'cloudflare') return 'cloudflare';
+  if (t === 'true') return 1;
+  const n = Number(t);
+  if (Number.isInteger(n) && n > 0) return n;
+  throw new Error(`TRUST_PROXY must be false, true, cloudflare or a hop count (got "${v}")`);
+}
+
 export function loadConfig(env: Env): AppConfig {
   const environment = env.NODE_ENV === 'production' ? 'production' : env.NODE_ENV === 'test' ? 'test' : 'development';
   const appSecret = opt(env.APP_SECRET);
   if (!appSecret && environment === 'production') throw new Error('APP_SECRET is required in production');
   if (appSecret && appSecret.length < 32 && environment === 'production') throw new Error('APP_SECRET must be at least 32 characters');
+  if (environment === 'production' && !opt(env.PUBLIC_BASE_URL)) {
+    throw new Error('PUBLIC_BASE_URL is required in production (signed links, OAuth callbacks and HubSpot signatures depend on it)');
+  }
   const port = int(env.PORT, 8787);
   return {
     environment,
@@ -52,7 +69,7 @@ export function loadConfig(env: Env): AppConfig {
     viesMode: env.VIES_MODE === 'offline' ? 'offline' : 'live',
     viesTimeoutMs: int(env.VIES_TIMEOUT_MS, 6000),
     viesRequesterVat: opt(env.VIES_REQUESTER_VAT),
-    trustProxy: env.TRUST_PROXY === 'true' || env.TRUST_PROXY === '1',
+    trustProxy: parseTrustProxy(env.TRUST_PROXY),
     hubspotSlaMs: int(env.HUBSPOT_SLA_MS, 4200),
     certificateRetentionDays: int(env.CERTIFICATE_RETENTION_DAYS, 90),
     certificateLinkTtlSeconds: int(env.CERTIFICATE_LINK_TTL_SECONDS, 7 * 86_400),

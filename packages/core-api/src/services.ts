@@ -32,6 +32,8 @@ export interface CoreDeps {
   signer: CertificateSigner;
   /** Outbound fetch for VIES, RDAP, DoH, websites and OAuth (injectable for tests). */
   fetch?: FetchLike;
+  /** Fetch for company websites; should pin connections to the SSRF-checked address. */
+  siteFetch?: FetchLike;
   dns?: DnsResolver;
   /** Override the VIES client; `null` forces offline checksum mode. */
   vies?: ViesClient | null;
@@ -77,13 +79,14 @@ export function createServices(deps: CoreDeps): Services {
   const dns = deps.dns ?? new DohResolver(fetchImpl);
 
   const getClientIp = (c: Context): string => {
-    if (config.trustProxy) {
+    if (config.trustProxy === 'cloudflare') {
       const cf = c.req.header('cf-connecting-ip');
       if (cf) return cf.trim();
-      const xff = c.req.header('x-forwarded-for');
-      if (xff) return xff.split(',')[0]!.trim();
-      const real = c.req.header('x-real-ip');
-      if (real) return real.trim();
+    } else if (typeof config.trustProxy === 'number') {
+      // Each trusted proxy appends the address it saw; anything further left is client-supplied.
+      const hops = (c.req.header('x-forwarded-for') ?? '').split(',').map((h) => h.trim()).filter(Boolean);
+      const ip = hops[hops.length - config.trustProxy];
+      if (ip) return ip;
     }
     return deps.getClientIp?.(c) ?? 'unknown';
   };
@@ -99,7 +102,7 @@ export function createServices(deps: CoreDeps): Services {
     tenants: new TenantService(stores.tenants, config.appSecret, now),
     entitlements: new EntitlementService(stores.usage, { now, upgradeUrl: (t) => upgradeUrl(config, t) }),
     verifier: new TaxVerificationService({ vies, cache: stores.cache, now }),
-    enricher: new EnrichmentService({ dns, fetch: fetchImpl, rdap: new RdapClient(fetchImpl), cache: stores.cache, now }),
+    enricher: new EnrichmentService({ dns, fetch: fetchImpl, ...(deps.siteFetch ? { siteFetch: deps.siteFetch } : {}), rdap: new RdapClient(fetchImpl), cache: stores.cache, now }),
     certificates: new CertificateService({
       signer: deps.signer,
       documents: stores.documents,

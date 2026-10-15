@@ -35,8 +35,9 @@ function requireSecret(v: string | undefined, name: string): string {
 }
 
 /** Stripe Apps: `fetchStripeSignature()` signs JSON.stringify({ user_id, account_id }). */
-export async function verifyStripeApp(s: Services, c: Context, body: { user_id?: unknown; account_id?: unknown }): Promise<{ userId: string; accountId: string }> {
+export async function verifyStripeApp(s: Services, c: Context, raw: unknown): Promise<{ userId: string; accountId: string }> {
   const secret = requireSecret(s.config.secrets.stripeApp, 'STRIPE_APP_SECRET');
+  const body = (raw && typeof raw === 'object' ? raw : {}) as { user_id?: unknown; account_id?: unknown };
   if (typeof body.user_id !== 'string' || typeof body.account_id !== 'string') {
     throw new ApiError(400, 'bad_request', 'user_id and account_id are required');
   }

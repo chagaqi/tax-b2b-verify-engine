@@ -41,18 +41,13 @@ export interface ViesClientOptions {
 export const VIES_REST_URL = 'https://ec.europa.eu/taxation_customs/vies/rest-api/check-vat-number';
 export const VIES_SOAP_URL = 'https://ec.europa.eu/taxation_customs/vies/services/checkVatService';
 
-/** Error codes that say nothing about the number itself — retry or fall back. */
-export const TRANSIENT_VIES_ERRORS = new Set([
-  'MS_UNAVAILABLE',
-  'TIMEOUT',
-  'SERVICE_UNAVAILABLE',
-  'MS_MAX_CONCURRENT_REQ',
-  'GLOBAL_MAX_CONCURRENT_REQ',
-  'SERVER_BUSY',
-  'NETWORK_ERROR',
-  'HTTP_ERROR',
-  'INVALID_REQUESTER_INFO',
-]);
+/**
+ * The only VIES error that says something about the number itself. Every other code
+ * (MS_UNAVAILABLE, TIMEOUT, IP_BLOCKED, VAT_BLOCKED, throttling, unknown faults…) is an
+ * outage from our point of view and must never be reported as "not registered".
+ */
+const NUMBER_ERRORS = new Set(['INVALID_INPUT']);
+const errorStatus = (code: string): ViesStatus => (NUMBER_ERRORS.has(code) ? 'invalid' : 'unavailable');
 
 const PLACEHOLDER = /^-+$/;
 
@@ -136,7 +131,7 @@ export class ViesClient {
       if (json.actionSucceed === false) {
         const wrappers = (json.errorWrappers as { error?: string }[] | undefined) ?? [];
         const code = wrappers[0]?.error ?? 'UNKNOWN_ERROR';
-        return { ...base, status: TRANSIENT_VIES_ERRORS.has(code) ? 'unavailable' : 'invalid', errorCode: code, latencyMs: this.now() - started };
+        return { ...base, status: errorStatus(code), errorCode: code, latencyMs: this.now() - started };
       }
       if (typeof json.valid !== 'boolean') {
         return { ...base, status: 'unavailable', errorCode: 'UNEXPECTED_RESPONSE', latencyMs: this.now() - started };
@@ -180,7 +175,7 @@ export class ViesClient {
       const fault = xmlTag(xml, 'faultstring');
       if (fault) {
         const code = fault.trim();
-        return { ...base, status: TRANSIENT_VIES_ERRORS.has(code) ? 'unavailable' : 'invalid', errorCode: code, latencyMs: this.now() - started };
+        return { ...base, status: errorStatus(code), errorCode: code, latencyMs: this.now() - started };
       }
       const valid = xmlTag(xml, 'valid');
       if (valid !== 'true' && valid !== 'false') {

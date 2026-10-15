@@ -18,6 +18,7 @@ export interface GatewayOptions {
   env: Record<string, string | undefined>;
   assets: ShellAssets;
   fetch?: FetchLike;
+  siteFetch?: FetchLike;
   dns?: DnsResolver;
   stores?: Stores;
   logger?: Logger;
@@ -69,6 +70,7 @@ export async function createGateway(o: GatewayOptions): Promise<Gateway> {
     signer,
     logger,
     ...(o.fetch ? { fetch: o.fetch } : {}),
+    ...(o.siteFetch ? { siteFetch: o.siteFetch } : {}),
     ...(o.dns ? { dns: o.dns } : {}),
     ...(o.getClientIp ? { getClientIp: o.getClientIp } : {}),
   });

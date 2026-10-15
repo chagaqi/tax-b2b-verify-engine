@@ -26,7 +26,7 @@ packages/
 
 ```bash
 pnpm install
-pnpm test          # 389 Vitest tests
+pnpm test          # 425 Vitest tests
 pnpm typecheck
 pnpm build         # → packages/gateway/dist/server.mjs
 node packages/gateway/dist/server.mjs   # http://localhost:8787/playground

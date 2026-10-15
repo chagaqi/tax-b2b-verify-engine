@@ -19,12 +19,23 @@ export function webhookRoutes(s: Services): Hono<AppEnv> {
     }
   };
 
-  /** Process once per event id; duplicates are acknowledged without side effects. */
+  /**
+   * Process once per event id; duplicates are acknowledged without side effects. The id is
+   * claimed before running (so concurrent retries don't double-apply) and released if the
+   * handler fails, so the provider's retry is processed instead of being dropped.
+   */
   const once = async (c: Context, provider: string, eventId: string | undefined, run: () => Promise<string>) => {
-    if (eventId && !(await s.stores.cache.setIfAbsent(`wh:${provider}:${eventId}`, 1, IDEMPOTENCY_TTL))) {
+    const key = `wh:${provider}:${eventId}`;
+    if (eventId && !(await s.stores.cache.setIfAbsent(key, 1, IDEMPOTENCY_TTL))) {
       return c.json({ received: true, duplicate: true });
     }
-    const outcome = await run();
+    let outcome: string;
+    try {
+      outcome = await run();
+    } catch (err) {
+      if (eventId) await s.stores.cache.delete(key).catch(() => undefined);
+      throw err;
+    }
     s.logger.info('billing webhook', { provider, eventId, outcome });
     return c.json({ received: true, outcome });
   };
@@ -37,7 +48,7 @@ export function webhookRoutes(s: Services): Hono<AppEnv> {
       throw new ApiError(400, 'bad_request', 'Invalid Stripe-Signature');
     }
     const event = parse(raw);
-    return once(c, 'stripe', event.id as string | undefined, () => handleStripeEvent(s.tenants, event));
+    return once(c, 'stripe', event.id as string | undefined, () => handleStripeEvent(s.tenants, event, s.stores.cache));
   });
 
   app.post('/v1/webhooks/polar', async (c) => {
@@ -53,10 +64,14 @@ export function webhookRoutes(s: Services): Hono<AppEnv> {
 
   app.post('/v1/webhooks/monday', async (c) => {
     // monday's install/billing webhooks carry a JWT signed with the app Signing Secret.
-    await verifyMondaySigned(s, c);
+    const { accountId } = await verifyMondaySigned(s, c);
     const raw = await c.req.text();
     const event = parse(raw);
     const data = (event.data ?? {}) as Record<string, unknown>;
+    // The JWT is signed per account: it must not be replayable against another account.
+    if (accountId !== undefined && String(data.account_id) !== accountId) {
+      throw new ApiError(403, 'forbidden', 'Webhook account does not match the signed token');
+    }
     const id = `${String(event.type)}:${String(data.account_id)}:${String(event.timestamp ?? '')}`;
     return once(c, 'monday', id, () => handleMondayEvent(s.tenants, event));
   });

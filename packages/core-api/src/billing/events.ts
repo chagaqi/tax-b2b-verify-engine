@@ -1,4 +1,4 @@
-import type { Tenant } from '../stores/types.js';
+import type { ICacheStore, Tenant } from '../stores/types.js';
 import type { TenantService } from '../auth/tenants.js';
 import { planFromHint, type PlanId } from './plans.js';
 
@@ -14,7 +14,7 @@ const ACTIVE = new Set(['active', 'trialing', 'past_due']);
 
 async function applyPlan(tenants: TenantService, tenant: Tenant, plan: PlanId, billing: NonNullable<Tenant['billing']>): Promise<string> {
   const defined = Object.fromEntries(Object.entries(billing).filter(([, v]) => v !== undefined)) as NonNullable<Tenant['billing']>;
-  await tenants.save({ ...tenant, plan, billing: { ...tenant.billing, ...defined } });
+  await tenants.update(tenant.id, (t) => ({ ...t, plan, billing: { ...t.billing, ...defined } }));
   // Later Stripe/Polar subscription events often carry only provider ids, so remember them.
   // (monday identifies accounts directly; its plan ids are shared and must not become aliases.)
   if (billing.provider !== 'monday') {
@@ -38,7 +38,13 @@ async function resolveTenant(tenants: TenantService, provider: string, ids: { te
   return null;
 }
 
-export async function handleStripeEvent(tenants: TenantService, event: Json): Promise<string> {
+const PLAN_HINT_TTL = 2 * 86_400;
+
+/**
+ * @param cache Holds plan hints from subscription events that arrive *before*
+ *   `checkout.session.completed` has linked the subscription to a tenant.
+ */
+export async function handleStripeEvent(tenants: TenantService, event: Json, cache?: ICacheStore): Promise<string> {
   const obj: Json = event?.data?.object ?? {};
   switch (event?.type) {
     case 'checkout.session.completed': {
@@ -46,7 +52,9 @@ export async function handleStripeEvent(tenants: TenantService, event: Json): Pr
       const tenant = tenantId ? await tenants.get(String(tenantId)) : null;
       if (!tenant) return 'ignored: no tenant reference';
       if (obj.mode === 'subscription' && obj.payment_status !== 'paid' && obj.status !== 'complete') return 'ignored: checkout not complete';
-      return applyPlan(tenants, tenant, planFromHint(obj.metadata?.plan), {
+      // Sessions carry no price; use the link's metadata.plan, else a hint left by an earlier subscription event.
+      const pending = typeof obj.subscription === 'string' ? await cache?.get<string>(`stripe:planhint:${obj.subscription}`) : null;
+      return applyPlan(tenants, tenant, planFromHint(obj.metadata?.plan ?? pending), {
         provider: 'stripe',
         customerId: typeof obj.customer === 'string' ? obj.customer : undefined,
         subscriptionId: typeof obj.subscription === 'string' ? obj.subscription : undefined,
@@ -56,10 +64,13 @@ export async function handleStripeEvent(tenants: TenantService, event: Json): Pr
     case 'customer.subscription.created':
     case 'customer.subscription.updated':
     case 'customer.subscription.deleted': {
-      const tenant = await resolveTenant(tenants, 'stripe', { tenantId: obj.metadata?.tenant_id, subscriptionId: obj.id, customerId: obj.customer });
-      if (!tenant) return 'ignored: subscription not linked to a tenant';
       const item = obj.items?.data?.[0]?.price ?? {};
       const hint = obj.metadata?.plan ?? item.lookup_key ?? item.nickname;
+      const tenant = await resolveTenant(tenants, 'stripe', { tenantId: obj.metadata?.tenant_id, subscriptionId: obj.id, customerId: obj.customer });
+      if (!tenant) {
+        if (cache && typeof obj.id === 'string' && hint) await cache.set(`stripe:planhint:${obj.id}`, String(hint), PLAN_HINT_TTL);
+        return 'ignored: subscription not linked to a tenant';
+      }
       const active = event.type !== 'customer.subscription.deleted' && ACTIVE.has(obj.status);
       return applyPlan(tenants, tenant, active ? planFromHint(hint) : 'free', {
         provider: 'stripe',
@@ -79,7 +90,7 @@ export async function handlePolarEvent(tenants: TenantService, event: Json): Pro
   if (!type.startsWith('subscription.')) return `ignored: ${type}`;
   const sub: Json = event.data ?? {};
   const tenant = await resolveTenant(tenants, 'polar', {
-    tenantId: sub.metadata?.tenant_id ?? sub.customer?.external_id ?? sub.customer?.metadata?.tenant_id,
+    tenantId: sub.metadata?.tenant_id ?? sub.metadata?.reference_id ?? sub.customer?.external_id ?? sub.customer?.metadata?.tenant_id,
     subscriptionId: sub.id,
     customerId: sub.customer_id ?? sub.customer?.id,
   });

@@ -63,11 +63,24 @@ export class EntitlementService {
     return s;
   }
 
-  /** Throws 402 when the quota is exhausted; otherwise records `n` units. */
+  /**
+   * Atomically reserve `n` units: increment first (INCRBY returns the new total), and roll
+   * back + throw 402 if that overshoots the limit. Concurrent requests cannot all slip past.
+   */
   async consume(tenant: Tenant, metric: Metric, n = 1): Promise<QuotaState> {
     const s = await this.assertAvailable(tenant, metric, n);
-    const used = await this.usage.increment(this.key(tenant.id, metric, s.period), n, secondsLeftInMonth(this.now()));
+    const key = this.key(tenant.id, metric, s.period);
+    const used = await this.usage.increment(key, n, secondsLeftInMonth(this.now()));
+    if (s.limit !== null && used > s.limit) {
+      await this.usage.increment(key, -n, secondsLeftInMonth(this.now()));
+      await this.assertAvailable(tenant, metric, n); // throws the standard 402 with current numbers
+    }
     return { ...s, used, remaining: s.limit === null ? null : Math.max(0, s.limit - used) };
+  }
+
+  /** Give back units reserved for work that did not happen. */
+  async refund(tenant: Tenant, metric: Metric, n = 1): Promise<void> {
+    await this.usage.increment(this.key(tenant.id, metric, period(this.now())), -n, secondsLeftInMonth(this.now()));
   }
 }
 

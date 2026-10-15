@@ -7,7 +7,11 @@ export class TimeoutError extends Error {
   }
 }
 
-/** fetch with a hard deadline that also aborts the underlying request. */
+/**
+ * fetch with a hard deadline covering headers *and* body: the timer keeps running
+ * until the body is fully read (or cancelled), so a server that sends headers and
+ * then trickles bytes cannot hold the request open.
+ */
 export async function fetchWithTimeout(
   fetchImpl: FetchLike,
   url: string,
@@ -15,15 +19,36 @@ export async function fetchWithTimeout(
   ms = 5000,
 ): Promise<Response> {
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), ms);
+  let bodyCtrl: TransformStreamDefaultController<Uint8Array> | undefined;
+  const timer = setTimeout(() => {
+    ctrl.abort();
+    try {
+      bodyCtrl?.error(new TimeoutError(url, ms));
+    } catch {
+      // stream already closed
+    }
+  }, ms);
+  let res: Response;
   try {
-    return await fetchImpl(url, { ...init, signal: ctrl.signal });
+    res = await fetchImpl(url, { ...init, signal: ctrl.signal });
   } catch (err) {
+    clearTimeout(timer);
     if (ctrl.signal.aborted) throw new TimeoutError(url, ms);
     throw err;
-  } finally {
-    clearTimeout(timer);
   }
+  if (!res.body) {
+    clearTimeout(timer);
+    return res;
+  }
+  const guarded = res.body.pipeThrough(
+    new TransformStream<Uint8Array, Uint8Array>({
+      start: (c) => {
+        bodyCtrl = c;
+      },
+      flush: () => clearTimeout(timer),
+    }),
+  );
+  return new Response(guarded, { status: res.status, statusText: res.statusText, headers: res.headers });
 }
 
 /** Read at most `maxBytes` of a body as text (protects against huge pages). */

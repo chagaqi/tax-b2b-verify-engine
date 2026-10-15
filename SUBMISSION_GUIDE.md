@@ -16,7 +16,7 @@ Every shell talks to the same backend, so each submission is mostly configuratio
 The whole backend is one file, `packages/gateway/dist/server.mjs`. It needs only Node 20+, with no `node_modules`.
 
 ```bash
-pnpm install && pnpm check            # typecheck + build + 389 tests
+pnpm install && pnpm check            # typecheck + build + 425 tests
 docker build -t tax-b2b-verify .      # or copy dist/server.mjs to any Node host
 ```
 
@@ -29,7 +29,7 @@ docker build -t tax-b2b-verify .      # or copy dist/server.mjs to any Node host
 | `APP_SECRET` | `openssl rand -base64 48`. **Never rotate casually**: rotating it invalidates every API key, sealed OAuth token and certificate link. |
 | `CERT_SIGNING_KEY` | `node server.mjs --generate-signing-key`. Back this up: certificates are verified against it. |
 | `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | Upstash console → REST API. Without these, tenants and certificates live only in memory. |
-| `TRUST_PROXY=true` | Set this only if the gateway sits behind a proxy or CDN that sets `X-Forwarded-For` or `CF-Connecting-IP`. |
+| `TRUST_PROXY` | Leave it `false` when the gateway is exposed directly. Use `cloudflare` behind Cloudflare. Otherwise set the number of proxies that append to `X-Forwarded-For` (`true` = 1). The client-controlled leftmost entries are never used. |
 
 ### Optional environment
 
@@ -55,8 +55,8 @@ Open `/playground` in a browser and verify `IE6388047V`; it should come back **V
 
 | Provider | Steps |
 |---|---|
-| **Stripe** | 1. Create Pro ($29) and Business ($99) prices with lookup keys `pro_monthly` / `business_monthly`, plus Payment Links.<br>2. Set `UPGRADE_URL_STRIPE` to the Pro link. The API appends `client_reference_id=<tenant>`.<br>3. Add a webhook to `/v1/webhooks/stripe` for `checkout.session.completed` and `customer.subscription.{created,updated,deleted}`, then set `STRIPE_WEBHOOK_SECRET`.<br>4. No metadata setup is needed: the subscription and customer ids recorded at checkout link later subscription events (renewals, cancellations) back to the tenant. `metadata.tenant_id` is honoured if present. |
-| **Polar.sh** | 1. Create the products; a product named or tagged `business` maps to Business, anything else to Pro.<br>2. Set `UPGRADE_URL_POLAR`.<br>3. Add a webhook to `/v1/webhooks/polar` for the `subscription.*` events, then set `POLAR_WEBHOOK_SECRET`.<br>4. Pass the tenant id as customer `external_id` or metadata `tenant_id` on the first subscription event. Later events are matched by subscription id. |
+| **Stripe** | 1. Create Pro ($29) and Business ($99) prices with lookup keys `pro_monthly` / `business_monthly`, plus Payment Links. On the Business link, set the metadata `plan=business`; Stripe copies it onto checkout sessions. The lookup key on the subscription event also maps the plan, whichever event arrives first.<br>2. Set `UPGRADE_URL_STRIPE` to the Pro link. The API appends `client_reference_id=<tenant>`.<br>3. Add a webhook to `/v1/webhooks/stripe` for `checkout.session.completed` and `customer.subscription.{created,updated,deleted}`, then set `STRIPE_WEBHOOK_SECRET`.<br>4. No metadata setup is needed: the subscription and customer ids recorded at checkout link later subscription events (renewals, cancellations) back to the tenant. `metadata.tenant_id` is honoured if present. |
+| **Polar.sh** | 1. Create the products; a product named or tagged `business` maps to Business, anything else to Pro.<br>2. Set `UPGRADE_URL_POLAR`.<br>3. Add a webhook to `/v1/webhooks/polar` for the `subscription.*` events, then set `POLAR_WEBHOOK_SECRET`.<br>4. The upgrade URL appends `reference_id=<tenant>`. The handler accepts the tenant id from any of these fields on the first subscription event: metadata `tenant_id` or `reference_id`, customer `external_id`, or customer metadata `tenant_id`. Later events are matched by subscription id. In Polar's test mode, confirm which of these fields your checkout fills in. |
 | **monday.com** | Configure monetization plans in the Developer Center. `plan_id`s containing `business` map to Business, any other paid plan to Pro. |
 
 All webhook handlers are idempotent per event id. Unknown tenants are acknowledged with `200` and ignored, so providers don't retry forever.

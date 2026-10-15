@@ -5,6 +5,8 @@ import type { Services } from './services.js';
 import type { Tenant } from './stores/types.js';
 import { summarize, type VerificationResult } from './verify/service.js';
 import { ApiError } from './lib/errors.js';
+import { validateTaxId } from './taxid/index.js';
+import type { Metric } from './billing/plans.js';
 
 export interface VerifyResponse {
   verdict: VerificationResult['verdict'];
@@ -53,44 +55,64 @@ export async function runVerification(s: Services, tenant: Tenant, input: Verify
   const metered = !opts.sample;
   const wantsEnrichment = input.enrich && Boolean(input.domain || input.email);
 
-  // Fail fast before spending any quota on a request that cannot complete.
+  // Reject malformed input (422) before anything is charged.
+  validateTaxId(input.taxId, input.country);
+
+  // Reserve every unit up front (atomically); release the ones whose work does not happen.
+  const reserved: Metric[] = [];
+  const release = async (m: Metric) => {
+    const i = reserved.indexOf(m);
+    if (i < 0) return;
+    reserved.splice(i, 1);
+    await s.entitlements.refund(tenant, m).catch(() => undefined);
+  };
   if (metered) {
-    if (input.certificate) await s.entitlements.assertAvailable(tenant, 'certificates');
-    if (wantsEnrichment) await s.entitlements.assertAvailable(tenant, 'enrichments');
-    await s.entitlements.consume(tenant, 'taxVerifications');
+    try {
+      for (const m of ['taxVerifications', ...(input.certificate ? ['certificates'] : []), ...(wantsEnrichment ? ['enrichments'] : [])] as Metric[]) {
+        await s.entitlements.consume(tenant, m);
+        reserved.push(m);
+      }
+    } catch (err) {
+      for (const m of [...reserved]) await release(m);
+      throw err;
+    }
   }
 
-  const verifyPromise = s.verifier.verify(input.taxId, input.country, {
-    liveLookup: input.liveLookup,
-    fresh: input.fresh,
-    ...(opts.budgetMs ? { budgetMs: opts.budgetMs } : {}),
-  });
-  const enrichPromise = wantsEnrichment
-    ? s.enricher.enrich({ email: input.email, domain: input.domain }).catch((err: Error) => {
-        s.logger.warn('enrichment failed', { error: err.message });
-        return undefined;
-      })
-    : Promise.resolve(undefined);
-  const [verification, enrichment] = await Promise.all([verifyPromise, enrichPromise]);
-  if (metered && enrichment) await s.entitlements.consume(tenant, 'enrichments');
-
-  let certificate: IssuedCertificate | undefined;
-  if (input.certificate) {
-    if (metered) await s.entitlements.consume(tenant, 'certificates');
-    certificate = await s.certificates.issue({
-      verification,
-      tenantId: tenant.id,
-      ...(tenant.name ? { tenantName: tenant.name } : {}),
-      ...(input.companyName ? { companyName: input.companyName } : {}),
-      ...(input.domain ? { domain: input.domain } : {}),
-      ...(enrichment ? { enrichment } : {}),
-      sample: Boolean(opts.sample),
+  try {
+    const verifyPromise = s.verifier.verify(input.taxId, input.country, {
+      liveLookup: input.liveLookup,
+      fresh: input.fresh,
+      ...(opts.budgetMs ? { budgetMs: opts.budgetMs } : {}),
     });
+    const enrichPromise = wantsEnrichment
+      ? s.enricher.enrich({ email: input.email, domain: input.domain }).catch(async (err: Error) => {
+          s.logger.warn('enrichment failed', { error: err.message });
+          await release('enrichments');
+          return undefined;
+        })
+      : Promise.resolve(undefined);
+    const [verification, enrichment] = await Promise.all([verifyPromise, enrichPromise]);
+
+    let certificate: IssuedCertificate | undefined;
+    if (input.certificate) {
+      certificate = await s.certificates.issue({
+        verification,
+        tenantId: tenant.id,
+        ...(tenant.name ? { tenantName: tenant.name } : {}),
+        ...(input.companyName ? { companyName: input.companyName } : {}),
+        ...(input.domain ? { domain: input.domain } : {}),
+        ...(enrichment ? { enrichment } : {}),
+        sample: Boolean(opts.sample),
+      });
+    }
+    return toResponse(verification, {
+      ...(certificate ? { certificate } : {}),
+      ...(enrichment ? { enrichment } : {}),
+    });
+  } catch (err) {
+    for (const m of [...reserved]) await release(m);
+    throw err;
   }
-  return toResponse(verification, {
-    ...(certificate ? { certificate } : {}),
-    ...(enrichment ? { enrichment } : {}),
-  });
 }
 
 export async function runEnrichment(
@@ -99,10 +121,14 @@ export async function runEnrichment(
   input: { email?: string; domain?: string; include?: { rdap: boolean; metadata: boolean } },
   opts: { sample?: boolean } = {},
 ): Promise<EnrichmentResult> {
-  if (!opts.sample) await s.entitlements.assertAvailable(tenant, 'enrichments');
-  const result = await s.enricher.enrich({ email: input.email, domain: input.domain }, input.include ?? {});
-  if (!opts.sample) await s.entitlements.consume(tenant, 'enrichments');
-  return result;
+  if (opts.sample) return s.enricher.enrich({ email: input.email, domain: input.domain }, input.include ?? {});
+  await s.entitlements.consume(tenant, 'enrichments');
+  try {
+    return await s.enricher.enrich({ email: input.email, domain: input.domain }, input.include ?? {});
+  } catch (err) {
+    await s.entitlements.refund(tenant, 'enrichments').catch(() => undefined);
+    throw err;
+  }
 }
 
 export function assertCertificateOwner(ownerTenantId: string, tenant: Tenant): void {

@@ -28,6 +28,7 @@ export interface ICacheStore {
   set<T>(key: string, value: T, ttlSeconds: number): Promise<void>;
   /** Set only when absent; returns true when this call created the key. */
   setIfAbsent<T>(key: string, value: T, ttlSeconds: number): Promise<boolean>;
+  delete(key: string): Promise<void>;
 }
 
 export type Platform = 'direct' | 'stripe' | 'hubspot' | 'pipedrive' | 'monday' | 'makecom' | 'playground';
@@ -60,6 +61,7 @@ export interface Tenant {
 
 export interface ITenantStore {
   get(id: string): Promise<Tenant | null>;
+  /** Upsert. The platform/externalAccountId index is first-writer-wins, so racing installs converge. */
   put(tenant: Tenant): Promise<void>;
   findByApiKeyHash(hash: string): Promise<Tenant | null>;
   findByExternal(platform: Platform, accountId: string): Promise<Tenant | null>;

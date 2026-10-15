@@ -27,7 +27,7 @@ export function stripeRoutes(s: Services): Hono<AppEnv> {
   const app = new Hono<AppEnv>();
 
   app.post('/v1/integrations/stripe/verify', async (c) => {
-    const raw = (await readJson(c)) as Record<string, unknown>;
+    const raw = await readJson(c);
     const { accountId } = await verifyStripeApp(s, c, raw);
     const parsed = StripeVerifySchema.safeParse(raw);
     if (!parsed.success) throw zodToApiError(parsed.error);
@@ -53,7 +53,7 @@ export function stripeRoutes(s: Services): Hono<AppEnv> {
   });
 
   app.post('/v1/integrations/stripe/account', async (c) => {
-    const raw = (await readJson(c)) as Record<string, unknown>;
+    const raw = await readJson(c);
     const { accountId } = await verifyStripeApp(s, c, raw);
     const tenant = await s.tenants.ensurePlatformTenant('stripe', accountId);
     const up = upgradeUrl(s.config, tenant);

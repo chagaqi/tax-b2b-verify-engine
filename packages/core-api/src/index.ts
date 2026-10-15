@@ -7,6 +7,7 @@ export { validateTaxId, listJurisdictions, resolveRule, TaxIdInputError, RULES, 
 export { TaxVerificationService, summarize, type VerificationResult, type Verdict } from './verify/service.js';
 export { ViesClient, VIES_REST_URL, VIES_SOAP_URL, type ViesResult } from './vies/client.js';
 export { EnrichmentService, type EnrichmentResult } from './enrich/service.js';
+export { isPrivateIp, normalizeDomain } from './enrich/domain.js';
 export { DohResolver, StaticResolver, type DnsResolver, type DnsAnswer, type RecordType } from './enrich/dns.js';
 export { CertificateSigner } from './certificates/signer.js';
 export { CertificateService, type IssuedCertificate } from './certificates/service.js';

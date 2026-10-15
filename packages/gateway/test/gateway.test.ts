@@ -44,9 +44,12 @@ describe('createGateway', () => {
     expect(calls).toEqual(['https://redis.test/pipeline']);
   });
 
-  it('refuses to start in production without secrets and a signing key', async () => {
+  it('refuses to start in production without secrets, a public URL and a signing key', async () => {
     await expect(createGateway({ env: { NODE_ENV: 'production' }, assets: loadShellAssets(), logger: silentLogger })).rejects.toThrow('APP_SECRET is required');
-    await expect(createGateway({ env: { NODE_ENV: 'production', APP_SECRET: 'y'.repeat(40) }, assets: loadShellAssets(), logger: silentLogger })).rejects.toThrow('CERT_SIGNING_KEY is required');
+    await expect(createGateway({ env: { NODE_ENV: 'production', APP_SECRET: 'y'.repeat(40) }, assets: loadShellAssets(), logger: silentLogger })).rejects.toThrow('PUBLIC_BASE_URL is required');
+    await expect(
+      createGateway({ env: { NODE_ENV: 'production', APP_SECRET: 'y'.repeat(40), PUBLIC_BASE_URL: 'https://x.test' }, assets: loadShellAssets(), logger: silentLogger }),
+    ).rejects.toThrow('CERT_SIGNING_KEY is required');
   });
 });
 
@@ -134,5 +137,28 @@ describe('single-file bundle (dist/server.mjs)', () => {
     expect(await (await fetch(`${baseUrl}/playground`)).text()).toContain('Tax ID &amp; B2B Domain Playground');
     expect(await (await fetch(`${baseUrl}/apps/monday/item-view`)).text()).toContain('monday-sdk-js@0.5.9');
     expect(await (await fetch(`${baseUrl}/apps/pipedrive/modal.js`)).text()).toContain('export function createModal');
+  });
+});
+
+describe('pinned site fetch (DNS-rebinding defence)', () => {
+  it('connects to the validated address and streams the body', async () => {
+    const { createServer } = await import('node:http');
+    const { createPinnedFetch } = await import('../src/pinned-fetch.js');
+    const server = createServer((req, res) => res.writeHead(200, { 'content-type': 'text/html' }).end(`<title>${req.headers.host}</title>`));
+    await new Promise<void>((r) => server.listen(0, '127.0.0.1', r));
+    const port = (server.address() as { port: number }).port;
+    try {
+      // Resolver says "site.test" → 127.0.0.1; with the block-list disabled the socket must go exactly there.
+      const allow = createPinnedFetch({ resolve: (_h, _o, cb) => cb(null, [{ address: '127.0.0.1', family: 4 }]), isBlocked: () => false });
+      const res = await allow(`http://site.test:${port}/`);
+      expect([res.status, await res.text()]).toEqual([200, `<title>site.test:${port}</title>`]);
+      // With the real guard, a hostname resolving to loopback is refused before connecting.
+      const guarded = createPinnedFetch({ resolve: (_h, _o, cb) => cb(null, [{ address: '127.0.0.1', family: 4 }]) });
+      await expect(guarded(`http://rebind.test:${port}/`)).rejects.toThrow('resolves to a private address');
+      const mixed = createPinnedFetch({ resolve: (_h, _o, cb) => cb(null, [{ address: '93.184.216.34', family: 4 }, { address: '::ffff:7f00:1', family: 6 }]) });
+      await expect(mixed(`http://mixed.test:${port}/`)).rejects.toThrow('private address');
+    } finally {
+      server.close();
+    }
   });
 });

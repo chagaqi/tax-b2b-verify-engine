@@ -44,6 +44,11 @@ export interface EnrichOptions {
 export interface EnrichmentServiceDeps {
   dns: DnsResolver;
   fetch: FetchLike;
+  /**
+   * Fetch used for company websites — the one user-controlled outbound target. Runtimes that can
+   * pin the connection to the validated IP (the Node gateway) pass one to defeat DNS rebinding.
+   */
+  siteFetch?: FetchLike;
   rdap: RdapClient;
   cache: ICacheStore;
   now?: () => Date;
@@ -161,7 +166,7 @@ export class EnrichmentService {
     const skipWeb = !resolves || disposable.value || freeProvider;
     const [registration, company] = await Promise.all([
       opts.rdap === false || !resolves ? Promise.resolve(undefined) : this.deps.rdap.lookup(domain, this.now()),
-      opts.metadata === false || skipWeb ? Promise.resolve(undefined) : fetchCompanyMetadata(domain, { fetch: this.deps.fetch, dns }),
+      opts.metadata === false || skipWeb ? Promise.resolve(undefined) : fetchCompanyMetadata(domain, { fetch: this.deps.siteFetch ?? this.deps.fetch, dns }),
     ]);
 
     const classification: DomainClassification = !resolves

@@ -102,6 +102,9 @@ export class InMemoryCacheStore implements ICacheStore {
     this.entries.set(key, JSON.stringify(value), ttlSeconds);
     return true;
   }
+  async delete(key: string): Promise<void> {
+    this.entries.delete(key);
+  }
 }
 
 export class InMemoryTenantStore implements ITenantStore {
@@ -120,7 +123,8 @@ export class InMemoryTenantStore implements ITenantStore {
     if (prev?.apiKeyHash && prev.apiKeyHash !== tenant.apiKeyHash) this.byKey.delete(prev.apiKeyHash);
     this.tenants.set(tenant.id, structuredClone(tenant));
     if (tenant.apiKeyHash) this.byKey.set(tenant.apiKeyHash, tenant.id);
-    if (tenant.externalAccountId) this.byExternal.set(`${tenant.platform}:${tenant.externalAccountId}`, tenant.id);
+    const ext = `${tenant.platform}:${tenant.externalAccountId}`;
+    if (tenant.externalAccountId && !this.byExternal.has(ext)) this.byExternal.set(ext, tenant.id);
   }
 
   async findByApiKeyHash(hash: string): Promise<Tenant | null> {

@@ -4,6 +4,7 @@ import { generateEd25519 } from '@tbve/core-api';
 import { loadShellAssets } from './assets.js';
 import { NodeDnsResolver } from './dns.js';
 import { createGateway } from './gateway.js';
+import { createPinnedFetch } from './pinned-fetch.js';
 
 const HELP = `tax-b2b-verify-engine gateway
 
@@ -29,6 +30,7 @@ async function main(argv: string[]) {
     env: process.env,
     assets: loadShellAssets(),
     dns: new NodeDnsResolver(),
+    siteFetch: createPinnedFetch(),
     getClientIp: (c) => getConnInfo(c).remote.address,
   });
   const port = Number(process.env.PORT ?? 8787);
