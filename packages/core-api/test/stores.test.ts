@@ -134,6 +134,9 @@ describe('Upstash REST stores', () => {
     expect(kv.has('tbve:apikey:k1')).toBe(false);
     expect((await stores.tenants.findByApiKeyHash('k2'))?.id).toBe('t1');
     expect((await stores.tenants.findByExternal('hubspot', '42'))?.id).toBe('t1');
+    await stores.tenants.setAlias('stripe:sub:sub_1', 't1');
+    expect((await stores.tenants.findByAlias('stripe:sub:sub_1'))?.id).toBe('t1');
+    expect(await stores.tenants.findByAlias('stripe:sub:nope')).toBeNull();
   });
 
   it('surfaces Upstash errors', async () => {

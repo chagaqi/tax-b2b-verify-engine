@@ -74,6 +74,14 @@ export class TenantService {
     return this.store.findByExternal(platform, accountId);
   }
 
+  setAlias(alias: string, tenantId: string): Promise<void> {
+    return this.store.setAlias(alias, tenantId);
+  }
+
+  findByAlias(alias: string): Promise<Tenant | null> {
+    return this.store.findByAlias(alias);
+  }
+
   /**
    * Marketplace installs are zero-config: the first signed request from an
    * account provisions a Free tenant for it.

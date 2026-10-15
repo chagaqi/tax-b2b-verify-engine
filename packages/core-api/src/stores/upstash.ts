@@ -128,6 +128,15 @@ export class UpstashTenantStore implements ITenantStore {
     const id = await this.redis.exec<string | null>(['GET', this.redis.key(`ext:${platform}:${accountId}`)]);
     return id ? this.get(id) : null;
   }
+
+  async setAlias(alias: string, tenantId: string): Promise<void> {
+    await this.redis.exec(['SET', this.redis.key(`alias:${alias}`), tenantId]);
+  }
+
+  async findByAlias(alias: string): Promise<Tenant | null> {
+    const id = await this.redis.exec<string | null>(['GET', this.redis.key(`alias:${alias}`)]);
+    return id ? this.get(id) : null;
+  }
 }
 
 export function createUpstashStores(url: string, token: string, fetchImpl: FetchLike = fetch): Stores {

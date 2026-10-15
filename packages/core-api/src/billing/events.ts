@@ -12,9 +12,30 @@ type Json = Record<string, any>;
 
 const ACTIVE = new Set(['active', 'trialing', 'past_due']);
 
-async function applyPlan(tenants: TenantService, tenant: Tenant, plan: PlanId, billing: Tenant['billing']): Promise<string> {
-  await tenants.save({ ...tenant, plan, billing: { ...tenant.billing, ...billing } as Tenant['billing'] });
+async function applyPlan(tenants: TenantService, tenant: Tenant, plan: PlanId, billing: NonNullable<Tenant['billing']>): Promise<string> {
+  const defined = Object.fromEntries(Object.entries(billing).filter(([, v]) => v !== undefined)) as NonNullable<Tenant['billing']>;
+  await tenants.save({ ...tenant, plan, billing: { ...tenant.billing, ...defined } });
+  // Later Stripe/Polar subscription events often carry only provider ids, so remember them.
+  // (monday identifies accounts directly; its plan ids are shared and must not become aliases.)
+  if (billing.provider !== 'monday') {
+    if (billing.subscriptionId) await tenants.setAlias(`${billing.provider}:sub:${billing.subscriptionId}`, tenant.id);
+    if (billing.customerId) await tenants.setAlias(`${billing.provider}:cus:${billing.customerId}`, tenant.id);
+  }
   return `tenant ${tenant.id} → ${plan}`;
+}
+
+/** Resolve a tenant from an explicit id, then from subscription/customer aliases. */
+async function resolveTenant(tenants: TenantService, provider: string, ids: { tenantId?: unknown; subscriptionId?: unknown; customerId?: unknown }): Promise<Tenant | null> {
+  if (ids.tenantId) {
+    const t = await tenants.get(String(ids.tenantId));
+    if (t) return t;
+  }
+  if (typeof ids.subscriptionId === 'string') {
+    const t = await tenants.findByAlias(`${provider}:sub:${ids.subscriptionId}`);
+    if (t) return t;
+  }
+  if (typeof ids.customerId === 'string') return tenants.findByAlias(`${provider}:cus:${ids.customerId}`);
+  return null;
 }
 
 export async function handleStripeEvent(tenants: TenantService, event: Json): Promise<string> {
@@ -35,9 +56,8 @@ export async function handleStripeEvent(tenants: TenantService, event: Json): Pr
     case 'customer.subscription.created':
     case 'customer.subscription.updated':
     case 'customer.subscription.deleted': {
-      const tenantId = obj.metadata?.tenant_id;
-      const tenant = tenantId ? await tenants.get(String(tenantId)) : null;
-      if (!tenant) return 'ignored: subscription has no tenant_id metadata';
+      const tenant = await resolveTenant(tenants, 'stripe', { tenantId: obj.metadata?.tenant_id, subscriptionId: obj.id, customerId: obj.customer });
+      if (!tenant) return 'ignored: subscription not linked to a tenant';
       const item = obj.items?.data?.[0]?.price ?? {};
       const hint = obj.metadata?.plan ?? item.lookup_key ?? item.nickname;
       const active = event.type !== 'customer.subscription.deleted' && ACTIVE.has(obj.status);
@@ -58,8 +78,11 @@ export async function handlePolarEvent(tenants: TenantService, event: Json): Pro
   const type = String(event?.type ?? '');
   if (!type.startsWith('subscription.')) return `ignored: ${type}`;
   const sub: Json = event.data ?? {};
-  const tenantId = sub.metadata?.tenant_id ?? sub.customer?.external_id ?? sub.customer?.metadata?.tenant_id;
-  const tenant = tenantId ? await tenants.get(String(tenantId)) : null;
+  const tenant = await resolveTenant(tenants, 'polar', {
+    tenantId: sub.metadata?.tenant_id ?? sub.customer?.external_id ?? sub.customer?.metadata?.tenant_id,
+    subscriptionId: sub.id,
+    customerId: sub.customer_id ?? sub.customer?.id,
+  });
   if (!tenant) return 'ignored: no tenant reference';
   const hint = sub.product?.metadata?.plan ?? sub.product?.name ?? sub.metadata?.plan;
   // `subscription.canceled` = cancel at period end (still paid); `revoked` = access ends now.

@@ -63,6 +63,20 @@ describe('Stripe billing webhook', () => {
     expect((await ctx.services.tenants.get(tenantId))?.plan).toBe('free');
   });
 
+  it('links later subscription events to the tenant via the checkout subscription id', async () => {
+    const ctx = await makeApp();
+    const { tenantId } = await ctx.install();
+    // Payment Links only carry client_reference_id on the checkout session, not on the subscription.
+    await stripePost(ctx, { id: 'evt_a', type: 'checkout.session.completed', data: { object: { client_reference_id: tenantId, status: 'complete', payment_status: 'paid', customer: 'cus_7', subscription: 'sub_7' } } });
+    expect((await ctx.services.tenants.get(tenantId))?.plan).toBe('pro');
+    const res = await stripePost(ctx, { id: 'evt_b', type: 'customer.subscription.deleted', data: { object: { id: 'sub_7', status: 'canceled', customer: 'cus_7', metadata: {} } } });
+    expect(await res.json()).toMatchObject({ outcome: `tenant ${tenantId} → free` });
+    expect(await ctx.services.tenants.get(tenantId)).toMatchObject({ plan: 'free', billing: { customerId: 'cus_7', subscriptionId: 'sub_7', status: 'canceled' } });
+    expect(await (await stripePost(ctx, { id: 'evt_c', type: 'customer.subscription.updated', data: { object: { id: 'sub_unknown', status: 'active', metadata: {} } } })).json()).toMatchObject({
+      outcome: 'ignored: subscription not linked to a tenant',
+    });
+  });
+
   it('maps subscription price lookup keys onto plans', async () => {
     const ctx = await makeApp();
     const { tenantId } = await ctx.install();
@@ -96,7 +110,8 @@ describe('Polar webhook (Standard Webhooks)', () => {
     expect(await ctx.services.tenants.get(tenantId)).toMatchObject({ plan: 'pro', billing: { provider: 'polar', subscriptionId: 'polar_sub' } });
     await polarPost(ctx, { type: 'subscription.canceled', data: { id: 'polar_sub', status: 'active', customer: { external_id: tenantId }, product: { name: 'Tax Verify Pro' } } });
     expect(await ctx.services.tenants.get(tenantId)).toMatchObject({ plan: 'pro', billing: { status: 'canceling' } });
-    await polarPost(ctx, { type: 'subscription.revoked', data: { id: 'polar_sub', status: 'canceled', customer: { external_id: tenantId } } });
+    // Revocation without any tenant reference still resolves through the subscription id.
+    await polarPost(ctx, { type: 'subscription.revoked', data: { id: 'polar_sub', status: 'canceled' } });
     expect((await ctx.services.tenants.get(tenantId))?.plan).toBe('free');
   });
 

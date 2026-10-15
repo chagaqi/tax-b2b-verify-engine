@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tax ID Verify</title>
 <style>
-:root{--bg:#fff;--ink:#323338;--muted:#676879;--line:#d0d4e4;--accent:#0073ea;--ok:#00854d;--warn:#d17a00;--bad:#d83a52;color-scheme:light}
-:root[data-theme="dark"],:root[data-theme="black"]{--bg:#181b34;--ink:#d5d8df;--muted:#9699a6;--line:#4b4e69;--accent:#579bfc;--ok:#33d391;--warn:#ffcb00;--bad:#ff7575;color-scheme:dark}
+:root{--bg:#fff;--ink:#323338;--muted:#676879;--line:#d0d4e4;--accent:#0073ea;--ok:#00854d;--warn:#d17a00;--bad:#d83a52;--on-badge:#fff;color-scheme:light}
+:root[data-theme="dark"],:root[data-theme="black"]{--bg:#181b34;--ink:#d5d8df;--muted:#9699a6;--line:#4b4e69;--accent:#579bfc;--ok:#33d391;--warn:#ffcb00;--bad:#ff7575;--on-badge:#111;color-scheme:dark}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Figtree,Roboto,"Segoe UI",sans-serif}
 main{padding:16px;max-width:640px}h1{font-size:17px;margin:0 0 10px}.muted{color:var(--muted)}
 form{display:grid;grid-template-columns:1fr 80px auto;gap:8px;align-items:end}@media (max-width:520px){form{grid-template-columns:1fr}}
 label{display:grid;gap:4px;font-size:12px;color:var(--muted)}input[type=text]{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
 .check{display:flex;gap:6px;align-items:center;font-size:13px;margin-top:8px}button{font:inherit;padding:8px 14px;border-radius:4px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
 button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}button:disabled{opacity:.6;cursor:wait}
-.badge{display:inline-block;padding:2px 9px;border-radius:999px;color:#fff;font-weight:600;font-size:12px}.ok{background:var(--ok)}.warn{background:var(--warn)}.bad{background:var(--bad)}.info{background:var(--accent)}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;color:var(--on-badge);font-weight:600;font-size:12px}.ok{background:var(--ok)}.warn{background:var(--warn)}.bad{background:var(--bad)}.info{background:var(--accent)}
 dl{display:grid;grid-template-columns:140px 1fr;gap:4px 10px;margin:10px 0}dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}.err{color:var(--bad);font-weight:600}
 #result:empty{display:none}#result{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 </style>

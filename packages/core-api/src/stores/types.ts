@@ -63,6 +63,9 @@ export interface ITenantStore {
   put(tenant: Tenant): Promise<void>;
   findByApiKeyHash(hash: string): Promise<Tenant | null>;
   findByExternal(platform: Platform, accountId: string): Promise<Tenant | null>;
+  /** Secondary lookup keys, e.g. a billing provider's subscription/customer id. */
+  setAlias(alias: string, tenantId: string): Promise<void>;
+  findByAlias(alias: string): Promise<Tenant | null>;
 }
 
 export interface Stores {

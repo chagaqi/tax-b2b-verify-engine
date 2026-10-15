@@ -108,6 +108,7 @@ export class InMemoryTenantStore implements ITenantStore {
   private readonly tenants = new Map<string, Tenant>();
   private readonly byKey = new Map<string, string>();
   private readonly byExternal = new Map<string, string>();
+  private readonly aliases = new Map<string, string>();
 
   async get(id: string): Promise<Tenant | null> {
     const t = this.tenants.get(id);
@@ -129,6 +130,15 @@ export class InMemoryTenantStore implements ITenantStore {
 
   async findByExternal(platform: Platform, accountId: string): Promise<Tenant | null> {
     const id = this.byExternal.get(`${platform}:${accountId}`);
+    return id ? this.get(id) : null;
+  }
+
+  async setAlias(alias: string, tenantId: string): Promise<void> {
+    this.aliases.set(alias, tenantId);
+  }
+
+  async findByAlias(alias: string): Promise<Tenant | null> {
+    const id = this.aliases.get(alias);
     return id ? this.get(id) : null;
   }
 }
