@@ -1,0 +1,21 @@
+{
+  "name": "@tbve/shell-hubspot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HubSpot app: CRM record card + custom workflow action that verifies companies/leads inside a 5s SLA and writes the status back.",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "upload": "hs project upload",
+    "dev": "hs project dev"
+  },
+  "dependencies": {
+    "@hubspot/ui-extensions": "^0.17.1",
+    "react": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "react-dom": "18.3.1"
+  }
+}

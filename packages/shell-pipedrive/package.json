@@ -1,0 +1,11 @@
+{
+  "name": "@tbve/shell-pipedrive",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pipedrive app extensions: Deal/Organization JSON panel + custom UI modal for tax-ID verification and certificates.",
+  "exports": {
+    ".": "./index.js",
+    "./public/*": "./public/*"
+  }
+}

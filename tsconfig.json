@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": { "noEmit": true },
+  "include": [
+    "packages/core-api/src/**/*.ts",
+    "packages/core-api/test/**/*.ts",
+    "packages/gateway/src/**/*.ts",
+    "packages/gateway/test/**/*.ts",
+    "packages/shell-makecom/test/**/*.ts",
+    "packages/shell-pipedrive/test/**/*.ts",
+    "packages/shell-monday/test/**/*.ts",
+    "vitest.config.ts"
+  ]
+}

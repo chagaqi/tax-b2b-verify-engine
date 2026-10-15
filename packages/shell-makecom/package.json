@@ -1,0 +1,7 @@
+{
+  "name": "@tbve/shell-makecom",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Make.com custom app (.imljson): Verify Tax ID, Enrich Company, Get Certificate modules + country RPC."
+}
