@@ -1,0 +1,14 @@
+{
+  "tenantId": "tnt_x",
+  "plan": {
+    "id": "free",
+    "name": "Free"
+  },
+  "usage": {
+    "taxVerifications": {
+      "used": 3,
+      "limit": 100,
+      "remaining": 97
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "domain": "stripe.com",
+  "classification": "corporate",
+  "freeProvider": false,
+  "disposable": {
+    "value": false
+  },
+  "dns": {
+    "resolves": true,
+    "mailProvider": "Google Workspace",
+    "nullMx": false
+  },
+  "security": {
+    "score": 85,
+    "grade": "A",
+    "findings": []
+  },
+  "risk": {
+    "score": 0,
+    "level": "low",
+    "reasons": []
+  }
+}

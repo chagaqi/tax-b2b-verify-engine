@@ -1,0 +1,8171 @@
+{
+"generator": "python-stdnum",
+"stdnumVersion": "2.2",
+"vectors": [
+{
+"country": "AT",
+"input": "U01138072",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U03820419",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U04309426",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U33770005",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U34962001",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U36221405",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U37078292",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U38669632",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U60691674",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U68536970",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U77864394",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U87620977",
+"valid": true
+},
+{
+"country": "AT",
+"input": "U87620973",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U38669636",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U68536971",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U03820414",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U01138076",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U38669637",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U87620972",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U03820418",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U77864391",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U60691677",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U37078295",
+"valid": false
+},
+{
+"country": "AT",
+"input": "U87620970",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0028793261",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0153815373",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0413497142",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0417339728",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0425509207",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0669378390",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0810022155",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0837400604",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0917771339",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0945461473",
+"valid": true
+},
+{
+"country": "BE",
+"input": "1105996671",
+"valid": true
+},
+{
+"country": "BE",
+"input": "1792591276",
+"valid": true
+},
+{
+"country": "BE",
+"input": "0917771393",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0413497182",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0417339751",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0837400637",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0417339744",
+"valid": false
+},
+{
+"country": "BE",
+"input": "1105996618",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0425509218",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0917771337",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0413497159",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0917771376",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0425509282",
+"valid": false
+},
+{
+"country": "BE",
+"input": "0917771312",
+"valid": false
+},
+{
+"country": "BG",
+"input": "142711266",
+"valid": true
+},
+{
+"country": "BG",
+"input": "191769237",
+"valid": true
+},
+{
+"country": "BG",
+"input": "218612099",
+"valid": true
+},
+{
+"country": "BG",
+"input": "225853435",
+"valid": true
+},
+{
+"country": "BG",
+"input": "252218988",
+"valid": true
+},
+{
+"country": "BG",
+"input": "434173746",
+"valid": true
+},
+{
+"country": "BG",
+"input": "455922729",
+"valid": true
+},
+{
+"country": "BG",
+"input": "630106481",
+"valid": true
+},
+{
+"country": "BG",
+"input": "643507015",
+"valid": true
+},
+{
+"country": "BG",
+"input": "932673280",
+"valid": true
+},
+{
+"country": "BG",
+"input": "992359925",
+"valid": true
+},
+{
+"country": "BG",
+"input": "994924526",
+"valid": true
+},
+{
+"country": "BG",
+"input": "630106488",
+"valid": false
+},
+{
+"country": "BG",
+"input": "643507016",
+"valid": false
+},
+{
+"country": "BG",
+"input": "434173748",
+"valid": false
+},
+{
+"country": "BG",
+"input": "994924523",
+"valid": false
+},
+{
+"country": "BG",
+"input": "225853430",
+"valid": false
+},
+{
+"country": "BG",
+"input": "225853436",
+"valid": false
+},
+{
+"country": "BG",
+"input": "434173743",
+"valid": false
+},
+{
+"country": "BG",
+"input": "992359928",
+"valid": false
+},
+{
+"country": "BG",
+"input": "142711263",
+"valid": false
+},
+{
+"country": "BG",
+"input": "225853431",
+"valid": false
+},
+{
+"country": "BG",
+"input": "434173744",
+"valid": false
+},
+{
+"country": "BG",
+"input": "191769233",
+"valid": false
+},
+{
+"country": "BG",
+"input": "1602634880",
+"valid": true
+},
+{
+"country": "BG",
+"input": "1602634884",
+"valid": true
+},
+{
+"country": "BG",
+"input": "2695320832",
+"valid": true
+},
+{
+"country": "BG",
+"input": "2695320836",
+"valid": true
+},
+{
+"country": "BG",
+"input": "5250966921",
+"valid": true
+},
+{
+"country": "BG",
+"input": "5250966922",
+"valid": true
+},
+{
+"country": "BG",
+"input": "6563796322",
+"valid": true
+},
+{
+"country": "BG",
+"input": "6563796323",
+"valid": true
+},
+{
+"country": "BG",
+"input": "7029405535",
+"valid": true
+},
+{
+"country": "BG",
+"input": "7753632365",
+"valid": true
+},
+{
+"country": "BG",
+"input": "7753632366",
+"valid": true
+},
+{
+"country": "BG",
+"input": "9832833200",
+"valid": true
+},
+{
+"country": "BG",
+"input": "7753632360",
+"valid": false
+},
+{
+"country": "BG",
+"input": "7029405532",
+"valid": false
+},
+{
+"country": "BG",
+"input": "9832833206",
+"valid": false
+},
+{
+"country": "BG",
+"input": "6563796328",
+"valid": false
+},
+{
+"country": "BG",
+"input": "2695320831",
+"valid": false
+},
+{
+"country": "BG",
+"input": "7029405537",
+"valid": false
+},
+{
+"country": "BG",
+"input": "2695320837",
+"valid": false
+},
+{
+"country": "BG",
+"input": "9832833208",
+"valid": false
+},
+{
+"country": "BG",
+"input": "7029405539",
+"valid": false
+},
+{
+"country": "BG",
+"input": "1602634881",
+"valid": false
+},
+{
+"country": "BG",
+"input": "5250966926",
+"valid": false
+},
+{
+"country": "BG",
+"input": "6563796325",
+"valid": false
+},
+{
+"country": "CY",
+"input": "06717831G",
+"valid": true
+},
+{
+"country": "CY",
+"input": "40932526C",
+"valid": true
+},
+{
+"country": "CY",
+"input": "44325713T",
+"valid": true
+},
+{
+"country": "CY",
+"input": "45213140L",
+"valid": true
+},
+{
+"country": "CY",
+"input": "45977354B",
+"valid": true
+},
+{
+"country": "CY",
+"input": "49209054J",
+"valid": true
+},
+{
+"country": "CY",
+"input": "51915411C",
+"valid": true
+},
+{
+"country": "CY",
+"input": "59318639T",
+"valid": true
+},
+{
+"country": "CY",
+"input": "59396057V",
+"valid": true
+},
+{
+"country": "CY",
+"input": "59421592J",
+"valid": true
+},
+{
+"country": "CY",
+"input": "93668419Z",
+"valid": true
+},
+{
+"country": "CY",
+"input": "98054519G",
+"valid": true
+},
+{
+"country": "CY",
+"input": "93668419G",
+"valid": false
+},
+{
+"country": "CY",
+"input": "51915411Y",
+"valid": false
+},
+{
+"country": "CY",
+"input": "45977354N",
+"valid": false
+},
+{
+"country": "CY",
+"input": "49209054W",
+"valid": false
+},
+{
+"country": "CY",
+"input": "59318639H",
+"valid": false
+},
+{
+"country": "CY",
+"input": "44325713A",
+"valid": false
+},
+{
+"country": "CY",
+"input": "40932526I",
+"valid": false
+},
+{
+"country": "CY",
+"input": "59318639K",
+"valid": false
+},
+{
+"country": "CY",
+"input": "59421592G",
+"valid": false
+},
+{
+"country": "CY",
+"input": "59421592K",
+"valid": false
+},
+{
+"country": "CY",
+"input": "93668419P",
+"valid": false
+},
+{
+"country": "CY",
+"input": "51915411U",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "14011123",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "14885476",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "18212875",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "18888291",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "37134809",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "52274501",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "53832795",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "68640072",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "80589812",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "81275293",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "83992197",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "88404676",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "81275291",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "52274504",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "83992196",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "88404678",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "83992193",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "80589814",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "81275299",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "18212873",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "18888290",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "81275292",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "80589818",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "88404677",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "0556215066",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "0953094054",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "1859250437",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "5560180769",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "6002296982",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "6059239296",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "6459150577",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "6506099700",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "7012087643",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "7055146252",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "7761075069",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "9404292568",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "0953094056",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "5560180766",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "7055146258",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "6059239293",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "7012087647",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "9404292562",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "7761075067",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "6002296980",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "5560180765",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "0556215064",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "7012087649",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "7012087644",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "601034374",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "606097593",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "608209579",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "613771101",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "624003540",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "638271422",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "647876217",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "657403981",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "662994898",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "663524979",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "688888937",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "697475231",
+"valid": true
+},
+{
+"country": "CZ",
+"input": "606097590",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "662994892",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "638271428",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "663524972",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "601034378",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "662994893",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "613771106",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "608209574",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "657403985",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "688888936",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "624003541",
+"valid": false
+},
+{
+"country": "CZ",
+"input": "662994899",
+"valid": false
+},
+{
+"country": "DE",
+"input": "141245560",
+"valid": true
+},
+{
+"country": "DE",
+"input": "182843482",
+"valid": true
+},
+{
+"country": "DE",
+"input": "280082125",
+"valid": true
+},
+{
+"country": "DE",
+"input": "295312399",
+"valid": true
+},
+{
+"country": "DE",
+"input": "346081001",
+"valid": true
+},
+{
+"country": "DE",
+"input": "410233714",
+"valid": true
+},
+{
+"country": "DE",
+"input": "412889270",
+"valid": true
+},
+{
+"country": "DE",
+"input": "447868344",
+"valid": true
+},
+{
+"country": "DE",
+"input": "662881569",
+"valid": true
+},
+{
+"country": "DE",
+"input": "769372372",
+"valid": true
+},
+{
+"country": "DE",
+"input": "783342837",
+"valid": true
+},
+{
+"country": "DE",
+"input": "966059422",
+"valid": true
+},
+{
+"country": "DE",
+"input": "662881564",
+"valid": false
+},
+{
+"country": "DE",
+"input": "346081006",
+"valid": false
+},
+{
+"country": "DE",
+"input": "410233718",
+"valid": false
+},
+{
+"country": "DE",
+"input": "966059425",
+"valid": false
+},
+{
+"country": "DE",
+"input": "182843484",
+"valid": false
+},
+{
+"country": "DE",
+"input": "783342830",
+"valid": false
+},
+{
+"country": "DE",
+"input": "280082120",
+"valid": false
+},
+{
+"country": "DE",
+"input": "447868340",
+"valid": false
+},
+{
+"country": "DE",
+"input": "966059424",
+"valid": false
+},
+{
+"country": "DE",
+"input": "447868343",
+"valid": false
+},
+{
+"country": "DE",
+"input": "280082129",
+"valid": false
+},
+{
+"country": "DE",
+"input": "295312396",
+"valid": false
+},
+{
+"country": "DK",
+"input": "10585635",
+"valid": true
+},
+{
+"country": "DK",
+"input": "31519330",
+"valid": true
+},
+{
+"country": "DK",
+"input": "38012746",
+"valid": true
+},
+{
+"country": "DK",
+"input": "40818200",
+"valid": true
+},
+{
+"country": "DK",
+"input": "43239368",
+"valid": true
+},
+{
+"country": "DK",
+"input": "46271416",
+"valid": true
+},
+{
+"country": "DK",
+"input": "49889968",
+"valid": true
+},
+{
+"country": "DK",
+"input": "54067925",
+"valid": true
+},
+{
+"country": "DK",
+"input": "68571480",
+"valid": true
+},
+{
+"country": "DK",
+"input": "93433483",
+"valid": true
+},
+{
+"country": "DK",
+"input": "94446678",
+"valid": true
+},
+{
+"country": "DK",
+"input": "95610102",
+"valid": true
+},
+{
+"country": "DK",
+"input": "94446670",
+"valid": false
+},
+{
+"country": "DK",
+"input": "10585638",
+"valid": false
+},
+{
+"country": "DK",
+"input": "94446672",
+"valid": false
+},
+{
+"country": "DK",
+"input": "93433488",
+"valid": false
+},
+{
+"country": "DK",
+"input": "46271417",
+"valid": false
+},
+{
+"country": "DK",
+"input": "95610109",
+"valid": false
+},
+{
+"country": "DK",
+"input": "94446677",
+"valid": false
+},
+{
+"country": "DK",
+"input": "31519333",
+"valid": false
+},
+{
+"country": "DK",
+"input": "54067927",
+"valid": false
+},
+{
+"country": "DK",
+"input": "68571481",
+"valid": false
+},
+{
+"country": "DK",
+"input": "93433482",
+"valid": false
+},
+{
+"country": "DK",
+"input": "10585633",
+"valid": false
+},
+{
+"country": "EE",
+"input": "101234403",
+"valid": true
+},
+{
+"country": "EE",
+"input": "102069295",
+"valid": true
+},
+{
+"country": "EE",
+"input": "103582784",
+"valid": true
+},
+{
+"country": "EE",
+"input": "104913022",
+"valid": true
+},
+{
+"country": "EE",
+"input": "105403382",
+"valid": true
+},
+{
+"country": "EE",
+"input": "106069712",
+"valid": true
+},
+{
+"country": "EE",
+"input": "106425220",
+"valid": true
+},
+{
+"country": "EE",
+"input": "106465565",
+"valid": true
+},
+{
+"country": "EE",
+"input": "106559400",
+"valid": true
+},
+{
+"country": "EE",
+"input": "107507600",
+"valid": true
+},
+{
+"country": "EE",
+"input": "107751757",
+"valid": true
+},
+{
+"country": "EE",
+"input": "109819228",
+"valid": true
+},
+{
+"country": "EE",
+"input": "107751758",
+"valid": false
+},
+{
+"country": "EE",
+"input": "107751756",
+"valid": false
+},
+{
+"country": "EE",
+"input": "105403386",
+"valid": false
+},
+{
+"country": "EE",
+"input": "104913027",
+"valid": false
+},
+{
+"country": "EE",
+"input": "107507606",
+"valid": false
+},
+{
+"country": "EE",
+"input": "106425224",
+"valid": false
+},
+{
+"country": "EE",
+"input": "106069714",
+"valid": false
+},
+{
+"country": "EE",
+"input": "104913029",
+"valid": false
+},
+{
+"country": "EE",
+"input": "107751754",
+"valid": false
+},
+{
+"country": "EE",
+"input": "103582788",
+"valid": false
+},
+{
+"country": "EE",
+"input": "106069710",
+"valid": false
+},
+{
+"country": "EE",
+"input": "104913020",
+"valid": false
+},
+{
+"country": "GR",
+"input": "061318751",
+"valid": true
+},
+{
+"country": "GR",
+"input": "136589163",
+"valid": true
+},
+{
+"country": "GR",
+"input": "211193677",
+"valid": true
+},
+{
+"country": "GR",
+"input": "214377668",
+"valid": true
+},
+{
+"country": "GR",
+"input": "227119122",
+"valid": true
+},
+{
+"country": "GR",
+"input": "300114873",
+"valid": true
+},
+{
+"country": "GR",
+"input": "340768550",
+"valid": true
+},
+{
+"country": "GR",
+"input": "434154747",
+"valid": true
+},
+{
+"country": "GR",
+"input": "592952505",
+"valid": true
+},
+{
+"country": "GR",
+"input": "780167703",
+"valid": true
+},
+{
+"country": "GR",
+"input": "898944471",
+"valid": true
+},
+{
+"country": "GR",
+"input": "996353943",
+"valid": true
+},
+{
+"country": "GR",
+"input": "996353948",
+"valid": false
+},
+{
+"country": "GR",
+"input": "780167701",
+"valid": false
+},
+{
+"country": "GR",
+"input": "340768552",
+"valid": false
+},
+{
+"country": "GR",
+"input": "780167705",
+"valid": false
+},
+{
+"country": "GR",
+"input": "340768556",
+"valid": false
+},
+{
+"country": "GR",
+"input": "434154746",
+"valid": false
+},
+{
+"country": "GR",
+"input": "340768557",
+"valid": false
+},
+{
+"country": "GR",
+"input": "136589168",
+"valid": false
+},
+{
+"country": "GR",
+"input": "061318754",
+"valid": false
+},
+{
+"country": "GR",
+"input": "227119120",
+"valid": false
+},
+{
+"country": "GR",
+"input": "136589160",
+"valid": false
+},
+{
+"country": "GR",
+"input": "227119121",
+"valid": false
+},
+{
+"country": "ES",
+"input": "09648864L",
+"valid": true
+},
+{
+"country": "ES",
+"input": "15489077A",
+"valid": true
+},
+{
+"country": "ES",
+"input": "35508930N",
+"valid": true
+},
+{
+"country": "ES",
+"input": "55238711W",
+"valid": true
+},
+{
+"country": "ES",
+"input": "58696655B",
+"valid": true
+},
+{
+"country": "ES",
+"input": "59701547X",
+"valid": true
+},
+{
+"country": "ES",
+"input": "60811653K",
+"valid": true
+},
+{
+"country": "ES",
+"input": "64327155L",
+"valid": true
+},
+{
+"country": "ES",
+"input": "71802374P",
+"valid": true
+},
+{
+"country": "ES",
+"input": "74383100L",
+"valid": true
+},
+{
+"country": "ES",
+"input": "78511843D",
+"valid": true
+},
+{
+"country": "ES",
+"input": "82895298D",
+"valid": true
+},
+{
+"country": "ES",
+"input": "78511843Y",
+"valid": false
+},
+{
+"country": "ES",
+"input": "82895298Y",
+"valid": false
+},
+{
+"country": "ES",
+"input": "55238711F",
+"valid": false
+},
+{
+"country": "ES",
+"input": "82895298J",
+"valid": false
+},
+{
+"country": "ES",
+"input": "74383100E",
+"valid": false
+},
+{
+"country": "ES",
+"input": "74383100O",
+"valid": false
+},
+{
+"country": "ES",
+"input": "09648864D",
+"valid": false
+},
+{
+"country": "ES",
+"input": "64327155S",
+"valid": false
+},
+{
+"country": "ES",
+"input": "60811653J",
+"valid": false
+},
+{
+"country": "ES",
+"input": "82895298A",
+"valid": false
+},
+{
+"country": "ES",
+"input": "15489077W",
+"valid": false
+},
+{
+"country": "ES",
+"input": "78511843L",
+"valid": false
+},
+{
+"country": "ES",
+"input": "X0910717D",
+"valid": true
+},
+{
+"country": "ES",
+"input": "X1721539N",
+"valid": true
+},
+{
+"country": "ES",
+"input": "X2614773H",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Y3558596G",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Y4230998R",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Y4408107X",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Y5087282H",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Y5825252X",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Y6572150Y",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Z1035676Z",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Z2934025N",
+"valid": true
+},
+{
+"country": "ES",
+"input": "Z7275594D",
+"valid": true
+},
+{
+"country": "ES",
+"input": "X0910717N",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Y3558596L",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Z2934025S",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Z1035676I",
+"valid": false
+},
+{
+"country": "ES",
+"input": "X2614773O",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Y5825252M",
+"valid": false
+},
+{
+"country": "ES",
+"input": "X2614773F",
+"valid": false
+},
+{
+"country": "ES",
+"input": "X2614773L",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Y5087282O",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Y4408107R",
+"valid": false
+},
+{
+"country": "ES",
+"input": "Z2934025Y",
+"valid": false
+},
+{
+"country": "ES",
+"input": "X0910717O",
+"valid": false
+},
+{
+"country": "ES",
+"input": "E98120389",
+"valid": true
+},
+{
+"country": "ES",
+"input": "E9812038I",
+"valid": true
+},
+{
+"country": "ES",
+"input": "F19914001",
+"valid": true
+},
+{
+"country": "ES",
+"input": "F1991400A",
+"valid": true
+},
+{
+"country": "ES",
+"input": "N87995197",
+"valid": true
+},
+{
+"country": "ES",
+"input": "N8799519G",
+"valid": true
+},
+{
+"country": "ES",
+"input": "R60327277",
+"valid": true
+},
+{
+"country": "ES",
+"input": "R6032727G",
+"valid": true
+},
+{
+"country": "ES",
+"input": "W57283517",
+"valid": true
+},
+{
+"country": "ES",
+"input": "W5728351G",
+"valid": true
+},
+{
+"country": "ES",
+"input": "W68588060",
+"valid": true
+},
+{
+"country": "ES",
+"input": "W6858806J",
+"valid": true
+},
+{
+"country": "ES",
+"input": "W5728351B",
+"valid": false
+},
+{
+"country": "ES",
+"input": "W57283519",
+"valid": false
+},
+{
+"country": "ES",
+"input": "E9812038D",
+"valid": false
+},
+{
+"country": "ES",
+"input": "E98120383",
+"valid": false
+},
+{
+"country": "ES",
+"input": "R6032727D",
+"valid": false
+},
+{
+"country": "ES",
+"input": "R60327274",
+"valid": false
+},
+{
+"country": "ES",
+"input": "R60327271",
+"valid": false
+},
+{
+"country": "ES",
+"input": "F19914009",
+"valid": false
+},
+{
+"country": "ES",
+"input": "F19914003",
+"valid": false
+},
+{
+"country": "ES",
+"input": "F1991400H",
+"valid": false
+},
+{
+"country": "ES",
+"input": "W68588064",
+"valid": false
+},
+{
+"country": "ES",
+"input": "N87995196",
+"valid": false
+},
+{
+"country": "ES",
+"input": "K3190667S",
+"valid": true
+},
+{
+"country": "ES",
+"input": "K6074272H",
+"valid": true
+},
+{
+"country": "ES",
+"input": "K6989000J",
+"valid": true
+},
+{
+"country": "ES",
+"input": "L0207674F",
+"valid": true
+},
+{
+"country": "ES",
+"input": "L0667646W",
+"valid": true
+},
+{
+"country": "ES",
+"input": "L4275213L",
+"valid": true
+},
+{
+"country": "ES",
+"input": "L4778613H",
+"valid": true
+},
+{
+"country": "ES",
+"input": "L7156605V",
+"valid": true
+},
+{
+"country": "ES",
+"input": "M0899618L",
+"valid": true
+},
+{
+"country": "ES",
+"input": "M6921095G",
+"valid": true
+},
+{
+"country": "ES",
+"input": "M7482628S",
+"valid": true
+},
+{
+"country": "ES",
+"input": "M9098674N",
+"valid": true
+},
+{
+"country": "ES",
+"input": "L0667646B",
+"valid": false
+},
+{
+"country": "ES",
+"input": "M9098674I",
+"valid": false
+},
+{
+"country": "ES",
+"input": "K3190667H",
+"valid": false
+},
+{
+"country": "ES",
+"input": "K6989000Q",
+"valid": false
+},
+{
+"country": "ES",
+"input": "L0207674A",
+"valid": false
+},
+{
+"country": "ES",
+"input": "L0207674B",
+"valid": false
+},
+{
+"country": "ES",
+"input": "L4275213A",
+"valid": false
+},
+{
+"country": "ES",
+"input": "L4275213W",
+"valid": false
+},
+{
+"country": "ES",
+"input": "M9098674X",
+"valid": false
+},
+{
+"country": "ES",
+"input": "M0899618H",
+"valid": false
+},
+{
+"country": "ES",
+"input": "L4778613W",
+"valid": false
+},
+{
+"country": "ES",
+"input": "K6989000P",
+"valid": false
+},
+{
+"country": "FI",
+"input": "04007496",
+"valid": true
+},
+{
+"country": "FI",
+"input": "18389333",
+"valid": true
+},
+{
+"country": "FI",
+"input": "19794787",
+"valid": true
+},
+{
+"country": "FI",
+"input": "31836900",
+"valid": true
+},
+{
+"country": "FI",
+"input": "32723860",
+"valid": true
+},
+{
+"country": "FI",
+"input": "47020340",
+"valid": true
+},
+{
+"country": "FI",
+"input": "50417066",
+"valid": true
+},
+{
+"country": "FI",
+"input": "55538967",
+"valid": true
+},
+{
+"country": "FI",
+"input": "66687343",
+"valid": true
+},
+{
+"country": "FI",
+"input": "74561046",
+"valid": true
+},
+{
+"country": "FI",
+"input": "82115644",
+"valid": true
+},
+{
+"country": "FI",
+"input": "90652917",
+"valid": true
+},
+{
+"country": "FI",
+"input": "82115640",
+"valid": false
+},
+{
+"country": "FI",
+"input": "74561042",
+"valid": false
+},
+{
+"country": "FI",
+"input": "32723865",
+"valid": false
+},
+{
+"country": "FI",
+"input": "04007499",
+"valid": false
+},
+{
+"country": "FI",
+"input": "32723867",
+"valid": false
+},
+{
+"country": "FI",
+"input": "19794789",
+"valid": false
+},
+{
+"country": "FI",
+"input": "04007495",
+"valid": false
+},
+{
+"country": "FI",
+"input": "74561049",
+"valid": false
+},
+{
+"country": "FI",
+"input": "66687348",
+"valid": false
+},
+{
+"country": "FI",
+"input": "32723864",
+"valid": false
+},
+{
+"country": "FI",
+"input": "90652911",
+"valid": false
+},
+{
+"country": "FI",
+"input": "47020341",
+"valid": false
+},
+{
+"country": "FR",
+"input": "05766138234",
+"valid": true
+},
+{
+"country": "FR",
+"input": "06088989835",
+"valid": true
+},
+{
+"country": "FR",
+"input": "07315260539",
+"valid": true
+},
+{
+"country": "FR",
+"input": "10563646306",
+"valid": true
+},
+{
+"country": "FR",
+"input": "28152765079",
+"valid": true
+},
+{
+"country": "FR",
+"input": "30327874459",
+"valid": true
+},
+{
+"country": "FR",
+"input": "38242048312",
+"valid": true
+},
+{
+"country": "FR",
+"input": "54563214121",
+"valid": true
+},
+{
+"country": "FR",
+"input": "63596350488",
+"valid": true
+},
+{
+"country": "FR",
+"input": "77414129817",
+"valid": true
+},
+{
+"country": "FR",
+"input": "86589616788",
+"valid": true
+},
+{
+"country": "FR",
+"input": "91005634530",
+"valid": true
+},
+{
+"country": "FR",
+"input": "82349523484",
+"valid": false
+},
+{
+"country": "FR",
+"input": "92318310526",
+"valid": false
+},
+{
+"country": "FR",
+"input": "59306483101",
+"valid": false
+},
+{
+"country": "FR",
+"input": "57637142198",
+"valid": false
+},
+{
+"country": "FR",
+"input": "44199159232",
+"valid": false
+},
+{
+"country": "FR",
+"input": "43161199640",
+"valid": false
+},
+{
+"country": "FR",
+"input": "17563646306",
+"valid": false
+},
+{
+"country": "FR",
+"input": "55248267950",
+"valid": false
+},
+{
+"country": "FR",
+"input": "12192471002",
+"valid": false
+},
+{
+"country": "FR",
+"input": "48868745574",
+"valid": false
+},
+{
+"country": "FR",
+"input": "74797912574",
+"valid": false
+},
+{
+"country": "FR",
+"input": "82622828082",
+"valid": false
+},
+{
+"country": "FR",
+"input": "0H185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "0V185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "1H185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "1V185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "1W185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "2J185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "2W185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "3J185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "3W185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "4J185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "4W185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "5J185459302",
+"valid": true
+},
+{
+"country": "FR",
+"input": "RE668599687",
+"valid": false
+},
+{
+"country": "FR",
+"input": "JC895337414",
+"valid": false
+},
+{
+"country": "FR",
+"input": "4U185459302",
+"valid": false
+},
+{
+"country": "FR",
+"input": "H2895337414",
+"valid": false
+},
+{
+"country": "FR",
+"input": "0U839404086",
+"valid": false
+},
+{
+"country": "FR",
+"input": "MD185459302",
+"valid": false
+},
+{
+"country": "FR",
+"input": "84895337414",
+"valid": false
+},
+{
+"country": "FR",
+"input": "RM895337414",
+"valid": false
+},
+{
+"country": "FR",
+"input": "QF185459302",
+"valid": false
+},
+{
+"country": "FR",
+"input": "Y1668599687",
+"valid": false
+},
+{
+"country": "FR",
+"input": "7M839404086",
+"valid": false
+},
+{
+"country": "FR",
+"input": "0M185459302",
+"valid": false
+},
+{
+"country": "HR",
+"input": "02189853275",
+"valid": true
+},
+{
+"country": "HR",
+"input": "10728443142",
+"valid": true
+},
+{
+"country": "HR",
+"input": "12755643531",
+"valid": true
+},
+{
+"country": "HR",
+"input": "26599141992",
+"valid": true
+},
+{
+"country": "HR",
+"input": "35864474066",
+"valid": true
+},
+{
+"country": "HR",
+"input": "56789932572",
+"valid": true
+},
+{
+"country": "HR",
+"input": "62896542171",
+"valid": true
+},
+{
+"country": "HR",
+"input": "63125499350",
+"valid": true
+},
+{
+"country": "HR",
+"input": "72384872382",
+"valid": true
+},
+{
+"country": "HR",
+"input": "79752836263",
+"valid": true
+},
+{
+"country": "HR",
+"input": "97319152166",
+"valid": true
+},
+{
+"country": "HR",
+"input": "98466355875",
+"valid": true
+},
+{
+"country": "HR",
+"input": "72384872389",
+"valid": false
+},
+{
+"country": "HR",
+"input": "63125499359",
+"valid": false
+},
+{
+"country": "HR",
+"input": "10728443147",
+"valid": false
+},
+{
+"country": "HR",
+"input": "12755643536",
+"valid": false
+},
+{
+"country": "HR",
+"input": "79752836267",
+"valid": false
+},
+{
+"country": "HR",
+"input": "56789932574",
+"valid": false
+},
+{
+"country": "HR",
+"input": "79752836261",
+"valid": false
+},
+{
+"country": "HR",
+"input": "12755643535",
+"valid": false
+},
+{
+"country": "HR",
+"input": "35864474063",
+"valid": false
+},
+{
+"country": "HR",
+"input": "97319152168",
+"valid": false
+},
+{
+"country": "HR",
+"input": "97319152165",
+"valid": false
+},
+{
+"country": "HR",
+"input": "63125499355",
+"valid": false
+},
+{
+"country": "HU",
+"input": "00513966",
+"valid": true
+},
+{
+"country": "HU",
+"input": "10225668",
+"valid": true
+},
+{
+"country": "HU",
+"input": "28487948",
+"valid": true
+},
+{
+"country": "HU",
+"input": "34881846",
+"valid": true
+},
+{
+"country": "HU",
+"input": "39137764",
+"valid": true
+},
+{
+"country": "HU",
+"input": "43851823",
+"valid": true
+},
+{
+"country": "HU",
+"input": "51960380",
+"valid": true
+},
+{
+"country": "HU",
+"input": "58123461",
+"valid": true
+},
+{
+"country": "HU",
+"input": "63075113",
+"valid": true
+},
+{
+"country": "HU",
+"input": "68788195",
+"valid": true
+},
+{
+"country": "HU",
+"input": "90615328",
+"valid": true
+},
+{
+"country": "HU",
+"input": "93322528",
+"valid": true
+},
+{
+"country": "HU",
+"input": "34881842",
+"valid": false
+},
+{
+"country": "HU",
+"input": "00513964",
+"valid": false
+},
+{
+"country": "HU",
+"input": "90615320",
+"valid": false
+},
+{
+"country": "HU",
+"input": "93322523",
+"valid": false
+},
+{
+"country": "HU",
+"input": "43851820",
+"valid": false
+},
+{
+"country": "HU",
+"input": "58123468",
+"valid": false
+},
+{
+"country": "HU",
+"input": "63075117",
+"valid": false
+},
+{
+"country": "HU",
+"input": "58123462",
+"valid": false
+},
+{
+"country": "HU",
+"input": "51960389",
+"valid": false
+},
+{
+"country": "HU",
+"input": "39137767",
+"valid": false
+},
+{
+"country": "HU",
+"input": "90615321",
+"valid": false
+},
+{
+"country": "HU",
+"input": "34881848",
+"valid": false
+},
+{
+"country": "IE",
+"input": "1032802C",
+"valid": true
+},
+{
+"country": "IE",
+"input": "1041151L",
+"valid": true
+},
+{
+"country": "IE",
+"input": "1114647V",
+"valid": true
+},
+{
+"country": "IE",
+"input": "2141929T",
+"valid": true
+},
+{
+"country": "IE",
+"input": "2857734U",
+"valid": true
+},
+{
+"country": "IE",
+"input": "3724233M",
+"valid": true
+},
+{
+"country": "IE",
+"input": "5178044K",
+"valid": true
+},
+{
+"country": "IE",
+"input": "5918898Q",
+"valid": true
+},
+{
+"country": "IE",
+"input": "5943763J",
+"valid": true
+},
+{
+"country": "IE",
+"input": "6587298J",
+"valid": true
+},
+{
+"country": "IE",
+"input": "6851465V",
+"valid": true
+},
+{
+"country": "IE",
+"input": "8382594N",
+"valid": true
+},
+{
+"country": "IE",
+"input": "8382594C",
+"valid": false
+},
+{
+"country": "IE",
+"input": "3724233E",
+"valid": false
+},
+{
+"country": "IE",
+"input": "1114647N",
+"valid": false
+},
+{
+"country": "IE",
+"input": "5178044N",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2141929W",
+"valid": false
+},
+{
+"country": "IE",
+"input": "6587298V",
+"valid": false
+},
+{
+"country": "IE",
+"input": "5178044A",
+"valid": false
+},
+{
+"country": "IE",
+"input": "6587298N",
+"valid": false
+},
+{
+"country": "IE",
+"input": "1114647W",
+"valid": false
+},
+{
+"country": "IE",
+"input": "6587298W",
+"valid": false
+},
+{
+"country": "IE",
+"input": "6587298U",
+"valid": false
+},
+{
+"country": "IE",
+"input": "5178044F",
+"valid": false
+},
+{
+"country": "IE",
+"input": "0206406FH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "0427303DH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "0919938QH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "1900721RH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "2846972FH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "3662985AH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "6085765SH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "6471747SH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "7310352BH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "7516900EH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "9458496UH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "9843181PH",
+"valid": true
+},
+{
+"country": "IE",
+"input": "6471747IH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "9458496SH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "9843181UH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "0919938AH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "1900721VH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "0206406WH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "7310352IH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "7516900GH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "1900721DH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "0427303BH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2846972KH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "0919938EH",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2C24627I",
+"valid": true
+},
+{
+"country": "IE",
+"input": "2I71125R",
+"valid": true
+},
+{
+"country": "IE",
+"input": "2K35470K",
+"valid": true
+},
+{
+"country": "IE",
+"input": "2M59486B",
+"valid": true
+},
+{
+"country": "IE",
+"input": "3N14327L",
+"valid": true
+},
+{
+"country": "IE",
+"input": "4+31836M",
+"valid": true
+},
+{
+"country": "IE",
+"input": "5D81331J",
+"valid": true
+},
+{
+"country": "IE",
+"input": "5Y84404G",
+"valid": true
+},
+{
+"country": "IE",
+"input": "7H13624T",
+"valid": true
+},
+{
+"country": "IE",
+"input": "8*42000J",
+"valid": true
+},
+{
+"country": "IE",
+"input": "8S33907F",
+"valid": true
+},
+{
+"country": "IE",
+"input": "9X79790H",
+"valid": true
+},
+{
+"country": "IE",
+"input": "8S33907U",
+"valid": false
+},
+{
+"country": "IE",
+"input": "5Y84404J",
+"valid": false
+},
+{
+"country": "IE",
+"input": "8S33907L",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2C24627J",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2C24627G",
+"valid": false
+},
+{
+"country": "IE",
+"input": "8*42000V",
+"valid": false
+},
+{
+"country": "IE",
+"input": "5D81331F",
+"valid": false
+},
+{
+"country": "IE",
+"input": "3N14327M",
+"valid": false
+},
+{
+"country": "IE",
+"input": "5D81331R",
+"valid": false
+},
+{
+"country": "IE",
+"input": "8*42000N",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2I71125G",
+"valid": false
+},
+{
+"country": "IE",
+"input": "2I71125A",
+"valid": false
+},
+{
+"country": "IT",
+"input": "01598811006",
+"valid": true
+},
+{
+"country": "IT",
+"input": "22160181206",
+"valid": true
+},
+{
+"country": "IT",
+"input": "29520759993",
+"valid": true
+},
+{
+"country": "IT",
+"input": "32157760011",
+"valid": true
+},
+{
+"country": "IT",
+"input": "51125330152",
+"valid": true
+},
+{
+"country": "IT",
+"input": "58725009995",
+"valid": true
+},
+{
+"country": "IT",
+"input": "63762031209",
+"valid": true
+},
+{
+"country": "IT",
+"input": "64033688884",
+"valid": true
+},
+{
+"country": "IT",
+"input": "64061041204",
+"valid": true
+},
+{
+"country": "IT",
+"input": "71033499998",
+"valid": true
+},
+{
+"country": "IT",
+"input": "75479048888",
+"valid": true
+},
+{
+"country": "IT",
+"input": "95858131204",
+"valid": true
+},
+{
+"country": "IT",
+"input": "64061041202",
+"valid": false
+},
+{
+"country": "IT",
+"input": "64061041206",
+"valid": false
+},
+{
+"country": "IT",
+"input": "22160181202",
+"valid": false
+},
+{
+"country": "IT",
+"input": "95858131206",
+"valid": false
+},
+{
+"country": "IT",
+"input": "95858131209",
+"valid": false
+},
+{
+"country": "IT",
+"input": "01598811002",
+"valid": false
+},
+{
+"country": "IT",
+"input": "01598811005",
+"valid": false
+},
+{
+"country": "IT",
+"input": "63762031204",
+"valid": false
+},
+{
+"country": "IT",
+"input": "95858131201",
+"valid": false
+},
+{
+"country": "IT",
+"input": "04066942506",
+"valid": false
+},
+{
+"country": "IT",
+"input": "04066942503",
+"valid": false
+},
+{
+"country": "IT",
+"input": "63762031207",
+"valid": false
+},
+{
+"country": "LT",
+"input": "000448612",
+"valid": true
+},
+{
+"country": "LT",
+"input": "006543017",
+"valid": true
+},
+{
+"country": "LT",
+"input": "014627319",
+"valid": true
+},
+{
+"country": "LT",
+"input": "118722915",
+"valid": true
+},
+{
+"country": "LT",
+"input": "156349910",
+"valid": true
+},
+{
+"country": "LT",
+"input": "267397116",
+"valid": true
+},
+{
+"country": "LT",
+"input": "375324916",
+"valid": true
+},
+{
+"country": "LT",
+"input": "642916411",
+"valid": true
+},
+{
+"country": "LT",
+"input": "730048614",
+"valid": true
+},
+{
+"country": "LT",
+"input": "875240818",
+"valid": true
+},
+{
+"country": "LT",
+"input": "890160913",
+"valid": true
+},
+{
+"country": "LT",
+"input": "909595711",
+"valid": true
+},
+{
+"country": "LT",
+"input": "014627310",
+"valid": false
+},
+{
+"country": "LT",
+"input": "118722916",
+"valid": false
+},
+{
+"country": "LT",
+"input": "000448619",
+"valid": false
+},
+{
+"country": "LT",
+"input": "006543014",
+"valid": false
+},
+{
+"country": "LT",
+"input": "000448610",
+"valid": false
+},
+{
+"country": "LT",
+"input": "156349915",
+"valid": false
+},
+{
+"country": "LT",
+"input": "375324915",
+"valid": false
+},
+{
+"country": "LT",
+"input": "118722912",
+"valid": false
+},
+{
+"country": "LT",
+"input": "909595718",
+"valid": false
+},
+{
+"country": "LT",
+"input": "909595713",
+"valid": false
+},
+{
+"country": "LT",
+"input": "890160915",
+"valid": false
+},
+{
+"country": "LT",
+"input": "875240817",
+"valid": false
+},
+{
+"country": "LT",
+"input": "110577419413",
+"valid": true
+},
+{
+"country": "LT",
+"input": "227627133412",
+"valid": true
+},
+{
+"country": "LT",
+"input": "252927375413",
+"valid": true
+},
+{
+"country": "LT",
+"input": "259567481215",
+"valid": true
+},
+{
+"country": "LT",
+"input": "368305636510",
+"valid": true
+},
+{
+"country": "LT",
+"input": "373138211116",
+"valid": true
+},
+{
+"country": "LT",
+"input": "393777579516",
+"valid": true
+},
+{
+"country": "LT",
+"input": "423445246715",
+"valid": true
+},
+{
+"country": "LT",
+"input": "523409581313",
+"valid": true
+},
+{
+"country": "LT",
+"input": "625978912216",
+"valid": true
+},
+{
+"country": "LT",
+"input": "862448504814",
+"valid": true
+},
+{
+"country": "LT",
+"input": "866768500711",
+"valid": true
+},
+{
+"country": "LT",
+"input": "252927375414",
+"valid": false
+},
+{
+"country": "LT",
+"input": "368305636516",
+"valid": false
+},
+{
+"country": "LT",
+"input": "625978912214",
+"valid": false
+},
+{
+"country": "LT",
+"input": "866768500719",
+"valid": false
+},
+{
+"country": "LT",
+"input": "368305636518",
+"valid": false
+},
+{
+"country": "LT",
+"input": "110577419412",
+"valid": false
+},
+{
+"country": "LT",
+"input": "625978912217",
+"valid": false
+},
+{
+"country": "LT",
+"input": "227627133413",
+"valid": false
+},
+{
+"country": "LT",
+"input": "523409581314",
+"valid": false
+},
+{
+"country": "LT",
+"input": "866768500717",
+"valid": false
+},
+{
+"country": "LT",
+"input": "259567481217",
+"valid": false
+},
+{
+"country": "LT",
+"input": "373138211113",
+"valid": false
+},
+{
+"country": "LU",
+"input": "01669956",
+"valid": true
+},
+{
+"country": "LU",
+"input": "13504835",
+"valid": true
+},
+{
+"country": "LU",
+"input": "19644017",
+"valid": true
+},
+{
+"country": "LU",
+"input": "20982855",
+"valid": true
+},
+{
+"country": "LU",
+"input": "28670132",
+"valid": true
+},
+{
+"country": "LU",
+"input": "34119861",
+"valid": true
+},
+{
+"country": "LU",
+"input": "41896441",
+"valid": true
+},
+{
+"country": "LU",
+"input": "46840082",
+"valid": true
+},
+{
+"country": "LU",
+"input": "51942622",
+"valid": true
+},
+{
+"country": "LU",
+"input": "66416951",
+"valid": true
+},
+{
+"country": "LU",
+"input": "73679351",
+"valid": true
+},
+{
+"country": "LU",
+"input": "76218073",
+"valid": true
+},
+{
+"country": "LU",
+"input": "41896432",
+"valid": false
+},
+{
+"country": "LU",
+"input": "66416911",
+"valid": false
+},
+{
+"country": "LU",
+"input": "41896402",
+"valid": false
+},
+{
+"country": "LU",
+"input": "13504813",
+"valid": false
+},
+{
+"country": "LU",
+"input": "28670124",
+"valid": false
+},
+{
+"country": "LU",
+"input": "13504892",
+"valid": false
+},
+{
+"country": "LU",
+"input": "46840010",
+"valid": false
+},
+{
+"country": "LU",
+"input": "66416900",
+"valid": false
+},
+{
+"country": "LU",
+"input": "41896498",
+"valid": false
+},
+{
+"country": "LU",
+"input": "20982831",
+"valid": false
+},
+{
+"country": "LU",
+"input": "41896471",
+"valid": false
+},
+{
+"country": "LU",
+"input": "34119830",
+"valid": false
+},
+{
+"country": "LV",
+"input": "45401448935",
+"valid": true
+},
+{
+"country": "LV",
+"input": "45516707352",
+"valid": true
+},
+{
+"country": "LV",
+"input": "46490774956",
+"valid": true
+},
+{
+"country": "LV",
+"input": "70837779333",
+"valid": true
+},
+{
+"country": "LV",
+"input": "77479656884",
+"valid": true
+},
+{
+"country": "LV",
+"input": "84948275793",
+"valid": true
+},
+{
+"country": "LV",
+"input": "88130555686",
+"valid": true
+},
+{
+"country": "LV",
+"input": "89727908553",
+"valid": true
+},
+{
+"country": "LV",
+"input": "91375191041",
+"valid": true
+},
+{
+"country": "LV",
+"input": "91691312227",
+"valid": true
+},
+{
+"country": "LV",
+"input": "94875042097",
+"valid": true
+},
+{
+"country": "LV",
+"input": "97848918465",
+"valid": true
+},
+{
+"country": "LV",
+"input": "70837779338",
+"valid": false
+},
+{
+"country": "LV",
+"input": "91375191042",
+"valid": false
+},
+{
+"country": "LV",
+"input": "45401448930",
+"valid": false
+},
+{
+"country": "LV",
+"input": "88130555684",
+"valid": false
+},
+{
+"country": "LV",
+"input": "91375191048",
+"valid": false
+},
+{
+"country": "LV",
+"input": "45516707354",
+"valid": false
+},
+{
+"country": "LV",
+"input": "46490774951",
+"valid": false
+},
+{
+"country": "LV",
+"input": "70837779332",
+"valid": false
+},
+{
+"country": "LV",
+"input": "70837779330",
+"valid": false
+},
+{
+"country": "LV",
+"input": "91983757652",
+"valid": false
+},
+{
+"country": "LV",
+"input": "70837779337",
+"valid": false
+},
+{
+"country": "LV",
+"input": "91691312220",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32049873854",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32101880008",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32133090377",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32476701790",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32485740599",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32539989809",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32663619549",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32665947870",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32711277020",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32745630944",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32790547040",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32954142453",
+"valid": true
+},
+{
+"country": "LV",
+"input": "32476701797",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32133090373",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32049873858",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32101880007",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32476701799",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32101880002",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32133090370",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32539989802",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32745630949",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32663619544",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32663619543",
+"valid": false
+},
+{
+"country": "LV",
+"input": "32711277028",
+"valid": false
+},
+{
+"country": "LV",
+"input": "01122812483",
+"valid": true
+},
+{
+"country": "LV",
+"input": "05096215818",
+"valid": true
+},
+{
+"country": "LV",
+"input": "10067517581",
+"valid": true
+},
+{
+"country": "LV",
+"input": "12022716252",
+"valid": true
+},
+{
+"country": "LV",
+"input": "12045215274",
+"valid": true
+},
+{
+"country": "LV",
+"input": "14026613081",
+"valid": true
+},
+{
+"country": "LV",
+"input": "20060211589",
+"valid": true
+},
+{
+"country": "LV",
+"input": "20103215353",
+"valid": true
+},
+{
+"country": "LV",
+"input": "21107211629",
+"valid": true
+},
+{
+"country": "LV",
+"input": "26055413351",
+"valid": true
+},
+{
+"country": "LV",
+"input": "26077917454",
+"valid": true
+},
+{
+"country": "LV",
+"input": "28095918484",
+"valid": true
+},
+{
+"country": "LV",
+"input": "21107211628",
+"valid": false
+},
+{
+"country": "LV",
+"input": "01122812480",
+"valid": false
+},
+{
+"country": "LV",
+"input": "14026613087",
+"valid": false
+},
+{
+"country": "LV",
+"input": "26077917459",
+"valid": false
+},
+{
+"country": "LV",
+"input": "14026613089",
+"valid": false
+},
+{
+"country": "LV",
+"input": "20103215356",
+"valid": false
+},
+{
+"country": "LV",
+"input": "26055413352",
+"valid": false
+},
+{
+"country": "LV",
+"input": "05096215815",
+"valid": false
+},
+{
+"country": "LV",
+"input": "28095918482",
+"valid": false
+},
+{
+"country": "LV",
+"input": "26055413359",
+"valid": false
+},
+{
+"country": "LV",
+"input": "12045215270",
+"valid": false
+},
+{
+"country": "LV",
+"input": "28095918481",
+"valid": false
+},
+{
+"country": "MT",
+"input": "12466771",
+"valid": true
+},
+{
+"country": "MT",
+"input": "33223714",
+"valid": true
+},
+{
+"country": "MT",
+"input": "34084345",
+"valid": true
+},
+{
+"country": "MT",
+"input": "37338008",
+"valid": true
+},
+{
+"country": "MT",
+"input": "39384708",
+"valid": true
+},
+{
+"country": "MT",
+"input": "41045593",
+"valid": true
+},
+{
+"country": "MT",
+"input": "41097579",
+"valid": true
+},
+{
+"country": "MT",
+"input": "48696833",
+"valid": true
+},
+{
+"country": "MT",
+"input": "79103553",
+"valid": true
+},
+{
+"country": "MT",
+"input": "82350956",
+"valid": true
+},
+{
+"country": "MT",
+"input": "83576460",
+"valid": true
+},
+{
+"country": "MT",
+"input": "99642261",
+"valid": true
+},
+{
+"country": "MT",
+"input": "38877401",
+"valid": false
+},
+{
+"country": "MT",
+"input": "37338001",
+"valid": false
+},
+{
+"country": "MT",
+"input": "90695950",
+"valid": false
+},
+{
+"country": "MT",
+"input": "63123681",
+"valid": false
+},
+{
+"country": "MT",
+"input": "66899052",
+"valid": false
+},
+{
+"country": "MT",
+"input": "63123686",
+"valid": false
+},
+{
+"country": "MT",
+"input": "66899053",
+"valid": false
+},
+{
+"country": "MT",
+"input": "82350953",
+"valid": false
+},
+{
+"country": "MT",
+"input": "83036458",
+"valid": false
+},
+{
+"country": "MT",
+"input": "48696836",
+"valid": false
+},
+{
+"country": "MT",
+"input": "44913452",
+"valid": false
+},
+{
+"country": "MT",
+"input": "39384706",
+"valid": false
+},
+{
+"country": "NL",
+"input": "088394712B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "136536645B01",
+"valid": true
+},
+{
+"country": "NL",
+"input": "267726363B02",
+"valid": true
+},
+{
+"country": "NL",
+"input": "299139384B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "338978860B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "405931098B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "420651226B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "489352169B02",
+"valid": true
+},
+{
+"country": "NL",
+"input": "713449627B02",
+"valid": true
+},
+{
+"country": "NL",
+"input": "749828274B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "840795890B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "972035382B17",
+"valid": true
+},
+{
+"country": "NL",
+"input": "299139387B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "267726368B02",
+"valid": false
+},
+{
+"country": "NL",
+"input": "136536648B01",
+"valid": false
+},
+{
+"country": "NL",
+"input": "640953586B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "840795896B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "749828275B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "489352161B02",
+"valid": false
+},
+{
+"country": "NL",
+"input": "136536642B01",
+"valid": false
+},
+{
+"country": "NL",
+"input": "840795891B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "405931093B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "420651220B17",
+"valid": false
+},
+{
+"country": "NL",
+"input": "972035380B17",
+"valid": false
+},
+{
+"country": "PL",
+"input": "0219665782",
+"valid": true
+},
+{
+"country": "PL",
+"input": "1792843009",
+"valid": true
+},
+{
+"country": "PL",
+"input": "2498763845",
+"valid": true
+},
+{
+"country": "PL",
+"input": "2843642920",
+"valid": true
+},
+{
+"country": "PL",
+"input": "3369073599",
+"valid": true
+},
+{
+"country": "PL",
+"input": "4091606732",
+"valid": true
+},
+{
+"country": "PL",
+"input": "4515634710",
+"valid": true
+},
+{
+"country": "PL",
+"input": "4977030188",
+"valid": true
+},
+{
+"country": "PL",
+"input": "5317816859",
+"valid": true
+},
+{
+"country": "PL",
+"input": "6257911513",
+"valid": true
+},
+{
+"country": "PL",
+"input": "7295632891",
+"valid": true
+},
+{
+"country": "PL",
+"input": "8830863243",
+"valid": true
+},
+{
+"country": "PL",
+"input": "4091606734",
+"valid": false
+},
+{
+"country": "PL",
+"input": "2498763849",
+"valid": false
+},
+{
+"country": "PL",
+"input": "5317816856",
+"valid": false
+},
+{
+"country": "PL",
+"input": "5317816851",
+"valid": false
+},
+{
+"country": "PL",
+"input": "3369073590",
+"valid": false
+},
+{
+"country": "PL",
+"input": "1792843005",
+"valid": false
+},
+{
+"country": "PL",
+"input": "8830863240",
+"valid": false
+},
+{
+"country": "PL",
+"input": "8830863249",
+"valid": false
+},
+{
+"country": "PL",
+"input": "4515634718",
+"valid": false
+},
+{
+"country": "PL",
+"input": "2498763847",
+"valid": false
+},
+{
+"country": "PL",
+"input": "2843642924",
+"valid": false
+},
+{
+"country": "PL",
+"input": "1685021880",
+"valid": false
+},
+{
+"country": "PT",
+"input": "114317577",
+"valid": true
+},
+{
+"country": "PT",
+"input": "192955578",
+"valid": true
+},
+{
+"country": "PT",
+"input": "247210455",
+"valid": true
+},
+{
+"country": "PT",
+"input": "247505706",
+"valid": true
+},
+{
+"country": "PT",
+"input": "316370142",
+"valid": true
+},
+{
+"country": "PT",
+"input": "342669877",
+"valid": true
+},
+{
+"country": "PT",
+"input": "395660394",
+"valid": true
+},
+{
+"country": "PT",
+"input": "473699826",
+"valid": true
+},
+{
+"country": "PT",
+"input": "497312158",
+"valid": true
+},
+{
+"country": "PT",
+"input": "546430783",
+"valid": true
+},
+{
+"country": "PT",
+"input": "846030985",
+"valid": true
+},
+{
+"country": "PT",
+"input": "877058172",
+"valid": true
+},
+{
+"country": "PT",
+"input": "114317579",
+"valid": false
+},
+{
+"country": "PT",
+"input": "395660393",
+"valid": false
+},
+{
+"country": "PT",
+"input": "846030988",
+"valid": false
+},
+{
+"country": "PT",
+"input": "877058179",
+"valid": false
+},
+{
+"country": "PT",
+"input": "395660392",
+"valid": false
+},
+{
+"country": "PT",
+"input": "497312159",
+"valid": false
+},
+{
+"country": "PT",
+"input": "546430788",
+"valid": false
+},
+{
+"country": "PT",
+"input": "497312153",
+"valid": false
+},
+{
+"country": "PT",
+"input": "247210456",
+"valid": false
+},
+{
+"country": "PT",
+"input": "395660395",
+"valid": false
+},
+{
+"country": "PT",
+"input": "247210450",
+"valid": false
+},
+{
+"country": "PT",
+"input": "497312155",
+"valid": false
+},
+{
+"country": "RO",
+"input": "16370603",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1812",
+"valid": true
+},
+{
+"country": "RO",
+"input": "283122354",
+"valid": true
+},
+{
+"country": "RO",
+"input": "48769549",
+"valid": true
+},
+{
+"country": "RO",
+"input": "548136",
+"valid": true
+},
+{
+"country": "RO",
+"input": "7474052",
+"valid": true
+},
+{
+"country": "RO",
+"input": "7874",
+"valid": true
+},
+{
+"country": "RO",
+"input": "809",
+"valid": true
+},
+{
+"country": "RO",
+"input": "83692575",
+"valid": true
+},
+{
+"country": "RO",
+"input": "84494",
+"valid": true
+},
+{
+"country": "RO",
+"input": "8541600017",
+"valid": true
+},
+{
+"country": "RO",
+"input": "9878870915",
+"valid": true
+},
+{
+"country": "RO",
+"input": "9878870919",
+"valid": false
+},
+{
+"country": "RO",
+"input": "7474056",
+"valid": false
+},
+{
+"country": "RO",
+"input": "548134",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1816",
+"valid": false
+},
+{
+"country": "RO",
+"input": "84498",
+"valid": false
+},
+{
+"country": "RO",
+"input": "84497",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1817",
+"valid": false
+},
+{
+"country": "RO",
+"input": "83692572",
+"valid": false
+},
+{
+"country": "RO",
+"input": "48769541",
+"valid": false
+},
+{
+"country": "RO",
+"input": "9878870918",
+"valid": false
+},
+{
+"country": "RO",
+"input": "16370606",
+"valid": false
+},
+{
+"country": "RO",
+"input": "805",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1540701513491",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1550511387663",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1590512310649",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1640926427180",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1650101436211",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1660115152103",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1660808179231",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1711204145525",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1730526047481",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1880720419939",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1940905166331",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1990825284829",
+"valid": true
+},
+{
+"country": "RO",
+"input": "1880720419938",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1550511387669",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1710908638399",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1660808179238",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1850928678003",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1590512310647",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1850928678005",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1501222943515",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1711204145529",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1940905166332",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1550511387662",
+"valid": false
+},
+{
+"country": "RO",
+"input": "1710908638396",
+"valid": false
+},
+{
+"country": "SE",
+"input": "039683005101",
+"valid": true
+},
+{
+"country": "SE",
+"input": "069642398701",
+"valid": true
+},
+{
+"country": "SE",
+"input": "158637639201",
+"valid": true
+},
+{
+"country": "SE",
+"input": "171666347901",
+"valid": true
+},
+{
+"country": "SE",
+"input": "179846148701",
+"valid": true
+},
+{
+"country": "SE",
+"input": "216041988901",
+"valid": true
+},
+{
+"country": "SE",
+"input": "388758673701",
+"valid": true
+},
+{
+"country": "SE",
+"input": "418146151001",
+"valid": true
+},
+{
+"country": "SE",
+"input": "529414890201",
+"valid": true
+},
+{
+"country": "SE",
+"input": "625889847401",
+"valid": true
+},
+{
+"country": "SE",
+"input": "651015435101",
+"valid": true
+},
+{
+"country": "SE",
+"input": "732191423101",
+"valid": true
+},
+{
+"country": "SE",
+"input": "179846148301",
+"valid": false
+},
+{
+"country": "SE",
+"input": "418146151801",
+"valid": false
+},
+{
+"country": "SE",
+"input": "388758673201",
+"valid": false
+},
+{
+"country": "SE",
+"input": "216041988101",
+"valid": false
+},
+{
+"country": "SE",
+"input": "529414890301",
+"valid": false
+},
+{
+"country": "SE",
+"input": "216041988701",
+"valid": false
+},
+{
+"country": "SE",
+"input": "625889847301",
+"valid": false
+},
+{
+"country": "SE",
+"input": "158637639601",
+"valid": false
+},
+{
+"country": "SE",
+"input": "651015435601",
+"valid": false
+},
+{
+"country": "SE",
+"input": "388758673901",
+"valid": false
+},
+{
+"country": "SE",
+"input": "039683005401",
+"valid": false
+},
+{
+"country": "SE",
+"input": "625889847501",
+"valid": false
+},
+{
+"country": "SI",
+"input": "17463556",
+"valid": true
+},
+{
+"country": "SI",
+"input": "37335693",
+"valid": true
+},
+{
+"country": "SI",
+"input": "38614014",
+"valid": true
+},
+{
+"country": "SI",
+"input": "39380980",
+"valid": true
+},
+{
+"country": "SI",
+"input": "45653828",
+"valid": true
+},
+{
+"country": "SI",
+"input": "49487833",
+"valid": true
+},
+{
+"country": "SI",
+"input": "52157415",
+"valid": true
+},
+{
+"country": "SI",
+"input": "62099124",
+"valid": true
+},
+{
+"country": "SI",
+"input": "63139618",
+"valid": true
+},
+{
+"country": "SI",
+"input": "80481817",
+"valid": true
+},
+{
+"country": "SI",
+"input": "81079923",
+"valid": true
+},
+{
+"country": "SI",
+"input": "86363654",
+"valid": true
+},
+{
+"country": "SI",
+"input": "37335690",
+"valid": false
+},
+{
+"country": "SI",
+"input": "62099128",
+"valid": false
+},
+{
+"country": "SI",
+"input": "86363650",
+"valid": false
+},
+{
+"country": "SI",
+"input": "80481819",
+"valid": false
+},
+{
+"country": "SI",
+"input": "63139617",
+"valid": false
+},
+{
+"country": "SI",
+"input": "38614010",
+"valid": false
+},
+{
+"country": "SI",
+"input": "17463550",
+"valid": false
+},
+{
+"country": "SI",
+"input": "17463558",
+"valid": false
+},
+{
+"country": "SI",
+"input": "86363658",
+"valid": false
+},
+{
+"country": "SI",
+"input": "81079929",
+"valid": false
+},
+{
+"country": "SI",
+"input": "49487837",
+"valid": false
+},
+{
+"country": "SI",
+"input": "62099120",
+"valid": false
+},
+{
+"country": "SK",
+"input": "2334984806",
+"valid": true
+},
+{
+"country": "SK",
+"input": "2531482239",
+"valid": true
+},
+{
+"country": "SK",
+"input": "3671774040",
+"valid": true
+},
+{
+"country": "SK",
+"input": "3927625911",
+"valid": true
+},
+{
+"country": "SK",
+"input": "4384371277",
+"valid": true
+},
+{
+"country": "SK",
+"input": "4834105958",
+"valid": true
+},
+{
+"country": "SK",
+"input": "6737978280",
+"valid": true
+},
+{
+"country": "SK",
+"input": "7520585468",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9495661593",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9648311915",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9776803883",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9939417202",
+"valid": true
+},
+{
+"country": "SK",
+"input": "3671774042",
+"valid": false
+},
+{
+"country": "SK",
+"input": "3927625917",
+"valid": false
+},
+{
+"country": "SK",
+"input": "4834105953",
+"valid": false
+},
+{
+"country": "SK",
+"input": "6737978285",
+"valid": false
+},
+{
+"country": "SK",
+"input": "2334984804",
+"valid": false
+},
+{
+"country": "SK",
+"input": "9776803887",
+"valid": false
+},
+{
+"country": "SK",
+"input": "9939417203",
+"valid": false
+},
+{
+"country": "SK",
+"input": "7520585461",
+"valid": false
+},
+{
+"country": "SK",
+"input": "6737978289",
+"valid": false
+},
+{
+"country": "SK",
+"input": "4834105957",
+"valid": false
+},
+{
+"country": "SK",
+"input": "9648311913",
+"valid": false
+},
+{
+"country": "SK",
+"input": "3927625914",
+"valid": false
+},
+{
+"country": "SK",
+"input": "0553218787",
+"valid": true
+},
+{
+"country": "SK",
+"input": "0959085864",
+"valid": true
+},
+{
+"country": "SK",
+"input": "6507245570",
+"valid": true
+},
+{
+"country": "SK",
+"input": "6959288446",
+"valid": true
+},
+{
+"country": "SK",
+"input": "7101186345",
+"valid": true
+},
+{
+"country": "SK",
+"input": "7452138298",
+"valid": true
+},
+{
+"country": "SK",
+"input": "8151307241",
+"valid": true
+},
+{
+"country": "SK",
+"input": "8860239146",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9305047785",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9406252460",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9502115854",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9561067252",
+"valid": true
+},
+{
+"country": "SK",
+"input": "9406252462",
+"valid": false
+},
+{
+"country": "SK",
+"input": "9502115858",
+"valid": false
+},
+{
+"country": "SK",
+"input": "8151307249",
+"valid": false
+},
+{
+"country": "SK",
+"input": "0553218784",
+"valid": false
+},
+{
+"country": "SK",
+"input": "8151307246",
+"valid": false
+},
+{
+"country": "SK",
+"input": "8860239144",
+"valid": false
+},
+{
+"country": "SK",
+"input": "9502115859",
+"valid": false
+},
+{
+"country": "SK",
+"input": "7101186340",
+"valid": false
+},
+{
+"country": "SK",
+"input": "0959085867",
+"valid": false
+},
+{
+"country": "SK",
+"input": "6959288443",
+"valid": false
+},
+{
+"country": "SK",
+"input": "0959085868",
+"valid": false
+},
+{
+"country": "SK",
+"input": "8860239148",
+"valid": false
+},
+{
+"country": "XI",
+"input": "166824538",
+"valid": true
+},
+{
+"country": "XI",
+"input": "166824580",
+"valid": true
+},
+{
+"country": "XI",
+"input": "166824593",
+"valid": true
+},
+{
+"country": "XI",
+"input": "277305407",
+"valid": true
+},
+{
+"country": "XI",
+"input": "277305449",
+"valid": true
+},
+{
+"country": "XI",
+"input": "277305491",
+"valid": true
+},
+{
+"country": "XI",
+"input": "533161224",
+"valid": true
+},
+{
+"country": "XI",
+"input": "533161237",
+"valid": true
+},
+{
+"country": "XI",
+"input": "533161279",
+"valid": true
+},
+{
+"country": "XI",
+"input": "986246126",
+"valid": true
+},
+{
+"country": "XI",
+"input": "986246139",
+"valid": true
+},
+{
+"country": "XI",
+"input": "986246181",
+"valid": true
+},
+{
+"country": "XI",
+"input": "277305435",
+"valid": false
+},
+{
+"country": "XI",
+"input": "533161290",
+"valid": false
+},
+{
+"country": "XI",
+"input": "986246154",
+"valid": false
+},
+{
+"country": "XI",
+"input": "277305412",
+"valid": false
+},
+{
+"country": "XI",
+"input": "986246142",
+"valid": false
+},
+{
+"country": "XI",
+"input": "533161278",
+"valid": false
+},
+{
+"country": "XI",
+"input": "986246179",
+"valid": false
+},
+{
+"country": "XI",
+"input": "166824535",
+"valid": false
+},
+{
+"country": "XI",
+"input": "986246120",
+"valid": false
+},
+{
+"country": "XI",
+"input": "277305442",
+"valid": false
+},
+{
+"country": "XI",
+"input": "533161262",
+"valid": false
+},
+{
+"country": "XI",
+"input": "533161293",
+"valid": false
+},
+{
+"country": "GB",
+"input": "404591901",
+"valid": true
+},
+{
+"country": "GB",
+"input": "404591914",
+"valid": true
+},
+{
+"country": "GB",
+"input": "404591956",
+"valid": true
+},
+{
+"country": "GB",
+"input": "404591998",
+"valid": true
+},
+{
+"country": "GB",
+"input": "599483704",
+"valid": true
+},
+{
+"country": "GB",
+"input": "599483717",
+"valid": true
+},
+{
+"country": "GB",
+"input": "599483759",
+"valid": true
+},
+{
+"country": "GB",
+"input": "661495811",
+"valid": true
+},
+{
+"country": "GB",
+"input": "661495853",
+"valid": true
+},
+{
+"country": "GB",
+"input": "661495866",
+"valid": true
+},
+{
+"country": "GB",
+"input": "931829216",
+"valid": true
+},
+{
+"country": "GB",
+"input": "931829258",
+"valid": true
+},
+{
+"country": "GB",
+"input": "661495822",
+"valid": false
+},
+{
+"country": "GB",
+"input": "931829208",
+"valid": false
+},
+{
+"country": "GB",
+"input": "931829230",
+"valid": false
+},
+{
+"country": "GB",
+"input": "661495868",
+"valid": false
+},
+{
+"country": "GB",
+"input": "599483792",
+"valid": false
+},
+{
+"country": "GB",
+"input": "661495814",
+"valid": false
+},
+{
+"country": "GB",
+"input": "404591984",
+"valid": false
+},
+{
+"country": "GB",
+"input": "931829213",
+"valid": false
+},
+{
+"country": "GB",
+"input": "931829224",
+"valid": false
+},
+{
+"country": "GB",
+"input": "599483780",
+"valid": false
+},
+{
+"country": "GB",
+"input": "404591964",
+"valid": false
+},
+{
+"country": "GB",
+"input": "599483766",
+"valid": false
+},
+{
+"country": "GB",
+"input": "005576975",
+"valid": true
+},
+{
+"country": "GB",
+"input": "018863262",
+"valid": true
+},
+{
+"country": "GB",
+"input": "025693075",
+"valid": true
+},
+{
+"country": "GB",
+"input": "028205402",
+"valid": true
+},
+{
+"country": "GB",
+"input": "028205499",
+"valid": true
+},
+{
+"country": "GB",
+"input": "031081329",
+"valid": true
+},
+{
+"country": "GB",
+"input": "059026569",
+"valid": true
+},
+{
+"country": "GB",
+"input": "069360549",
+"valid": true
+},
+{
+"country": "GB",
+"input": "083335862",
+"valid": true
+},
+{
+"country": "GB",
+"input": "091552564",
+"valid": true
+},
+{
+"country": "GB",
+"input": "095794900",
+"valid": true
+},
+{
+"country": "GB",
+"input": "095794997",
+"valid": true
+},
+{
+"country": "GB",
+"input": "018863249",
+"valid": false
+},
+{
+"country": "GB",
+"input": "031081337",
+"valid": false
+},
+{
+"country": "GB",
+"input": "031081312",
+"valid": false
+},
+{
+"country": "GB",
+"input": "031081354",
+"valid": false
+},
+{
+"country": "GB",
+"input": "095794959",
+"valid": false
+},
+{
+"country": "GB",
+"input": "025693034",
+"valid": false
+},
+{
+"country": "GB",
+"input": "083335875",
+"valid": false
+},
+{
+"country": "GB",
+"input": "025693063",
+"valid": false
+},
+{
+"country": "GB",
+"input": "095794986",
+"valid": false
+},
+{
+"country": "GB",
+"input": "031081366",
+"valid": false
+},
+{
+"country": "GB",
+"input": "025693042",
+"valid": false
+},
+{
+"country": "GB",
+"input": "059026513",
+"valid": false
+},
+{
+"country": "GB",
+"input": "372077201458",
+"valid": true
+},
+{
+"country": "GB",
+"input": "372077214458",
+"valid": true
+},
+{
+"country": "GB",
+"input": "372077256458",
+"valid": true
+},
+{
+"country": "GB",
+"input": "372077298458",
+"valid": true
+},
+{
+"country": "GB",
+"input": "405434915423",
+"valid": true
+},
+{
+"country": "GB",
+"input": "405434928423",
+"valid": true
+},
+{
+"country": "GB",
+"input": "405434970423",
+"valid": true
+},
+{
+"country": "GB",
+"input": "581197128278",
+"valid": true
+},
+{
+"country": "GB",
+"input": "581197170278",
+"valid": true
+},
+{
+"country": "GB",
+"input": "581197183278",
+"valid": true
+},
+{
+"country": "GB",
+"input": "897018921478",
+"valid": true
+},
+{
+"country": "GB",
+"input": "897018934478",
+"valid": true
+},
+{
+"country": "GB",
+"input": "405434926423",
+"valid": false
+},
+{
+"country": "GB",
+"input": "405434976423",
+"valid": false
+},
+{
+"country": "GB",
+"input": "897018961478",
+"valid": false
+},
+{
+"country": "GB",
+"input": "581197188278",
+"valid": false
+},
+{
+"country": "GB",
+"input": "581197108278",
+"valid": false
+},
+{
+"country": "GB",
+"input": "897018977478",
+"valid": false
+},
+{
+"country": "GB",
+"input": "897018969478",
+"valid": false
+},
+{
+"country": "GB",
+"input": "581197166278",
+"valid": false
+},
+{
+"country": "GB",
+"input": "897018923478",
+"valid": false
+},
+{
+"country": "GB",
+"input": "897018975478",
+"valid": false
+},
+{
+"country": "GB",
+"input": "581197146278",
+"valid": false
+},
+{
+"country": "GB",
+"input": "581197186278",
+"valid": false
+},
+{
+"country": "US",
+"input": "016146105",
+"valid": true
+},
+{
+"country": "US",
+"input": "018538238",
+"valid": true
+},
+{
+"country": "US",
+"input": "028464546",
+"valid": true
+},
+{
+"country": "US",
+"input": "032813676",
+"valid": true
+},
+{
+"country": "US",
+"input": "033656054",
+"valid": true
+},
+{
+"country": "US",
+"input": "036332848",
+"valid": true
+},
+{
+"country": "US",
+"input": "046360976",
+"valid": true
+},
+{
+"country": "US",
+"input": "049012257",
+"valid": true
+},
+{
+"country": "US",
+"input": "054232812",
+"valid": true
+},
+{
+"country": "US",
+"input": "054963115",
+"valid": true
+},
+{
+"country": "US",
+"input": "055761075",
+"valid": true
+},
+{
+"country": "US",
+"input": "062908501",
+"valid": true
+},
+{
+"country": "US",
+"input": "695458956",
+"valid": false
+},
+{
+"country": "US",
+"input": "288361586",
+"valid": false
+},
+{
+"country": "US",
+"input": "893493633",
+"valid": false
+},
+{
+"country": "US",
+"input": "002320686",
+"valid": false
+},
+{
+"country": "US",
+"input": "700773530",
+"valid": false
+},
+{
+"country": "US",
+"input": "192268769",
+"valid": false
+},
+{
+"country": "US",
+"input": "494891037",
+"valid": false
+},
+{
+"country": "US",
+"input": "098570281",
+"valid": false
+},
+{
+"country": "US",
+"input": "783702024",
+"valid": false
+},
+{
+"country": "US",
+"input": "962548841",
+"valid": false
+},
+{
+"country": "US",
+"input": "794638400",
+"valid": false
+},
+{
+"country": "US",
+"input": "190623780",
+"valid": false
+},
+{
+"country": "CA",
+"input": "000679654",
+"valid": true
+},
+{
+"country": "CA",
+"input": "011729811",
+"valid": true
+},
+{
+"country": "CA",
+"input": "143710168",
+"valid": true
+},
+{
+"country": "CA",
+"input": "289153231",
+"valid": true
+},
+{
+"country": "CA",
+"input": "320627987",
+"valid": true
+},
+{
+"country": "CA",
+"input": "418137782",
+"valid": true
+},
+{
+"country": "CA",
+"input": "469628457",
+"valid": true
+},
+{
+"country": "CA",
+"input": "512918178",
+"valid": true
+},
+{
+"country": "CA",
+"input": "624286845",
+"valid": true
+},
+{
+"country": "CA",
+"input": "789186202",
+"valid": true
+},
+{
+"country": "CA",
+"input": "874787930",
+"valid": true
+},
+{
+"country": "CA",
+"input": "984201616",
+"valid": true
+},
+{
+"country": "CA",
+"input": "000679652",
+"valid": false
+},
+{
+"country": "CA",
+"input": "011729812",
+"valid": false
+},
+{
+"country": "CA",
+"input": "624286843",
+"valid": false
+},
+{
+"country": "CA",
+"input": "874787934",
+"valid": false
+},
+{
+"country": "CA",
+"input": "320627980",
+"valid": false
+},
+{
+"country": "CA",
+"input": "320627982",
+"valid": false
+},
+{
+"country": "CA",
+"input": "289153239",
+"valid": false
+},
+{
+"country": "CA",
+"input": "011729814",
+"valid": false
+},
+{
+"country": "CA",
+"input": "512918174",
+"valid": false
+},
+{
+"country": "CA",
+"input": "143710166",
+"valid": false
+},
+{
+"country": "CA",
+"input": "289153234",
+"valid": false
+},
+{
+"country": "CA",
+"input": "000679656",
+"valid": false
+},
+{
+"country": "CA",
+"input": "009518127RC2919",
+"valid": true
+},
+{
+"country": "CA",
+"input": "090184839RC1532",
+"valid": true
+},
+{
+"country": "CA",
+"input": "259060218RT6147",
+"valid": true
+},
+{
+"country": "CA",
+"input": "334719077RM3967",
+"valid": true
+},
+{
+"country": "CA",
+"input": "403707011RT1321",
+"valid": true
+},
+{
+"country": "CA",
+"input": "587649153RT2852",
+"valid": true
+},
+{
+"country": "CA",
+"input": "606613909RP0433",
+"valid": true
+},
+{
+"country": "CA",
+"input": "685451478RC6408",
+"valid": true
+},
+{
+"country": "CA",
+"input": "722635414RT4176",
+"valid": true
+},
+{
+"country": "CA",
+"input": "757729975RT5536",
+"valid": true
+},
+{
+"country": "CA",
+"input": "973906498RP5519",
+"valid": true
+},
+{
+"country": "CA",
+"input": "982524423RP4950",
+"valid": true
+},
+{
+"country": "CA",
+"input": "259060215RT6147",
+"valid": false
+},
+{
+"country": "CA",
+"input": "982524421RP4950",
+"valid": false
+},
+{
+"country": "CA",
+"input": "722635418RT4176",
+"valid": false
+},
+{
+"country": "CA",
+"input": "606613905RP0433",
+"valid": false
+},
+{
+"country": "CA",
+"input": "982524424RP4950",
+"valid": false
+},
+{
+"country": "CA",
+"input": "334719073RM3967",
+"valid": false
+},
+{
+"country": "CA",
+"input": "973906492RP5519",
+"valid": false
+},
+{
+"country": "CA",
+"input": "685451470RC6408",
+"valid": false
+},
+{
+"country": "CA",
+"input": "587649157RT2852",
+"valid": false
+},
+{
+"country": "CA",
+"input": "403707012RT1321",
+"valid": false
+},
+{
+"country": "CA",
+"input": "403707014RT1321",
+"valid": false
+},
+{
+"country": "CA",
+"input": "606613901RP0433",
+"valid": false
+},
+{
+"country": "AU",
+"input": "20879809733",
+"valid": true
+},
+{
+"country": "AU",
+"input": "28048972961",
+"valid": true
+},
+{
+"country": "AU",
+"input": "45703827290",
+"valid": true
+},
+{
+"country": "AU",
+"input": "50258920611",
+"valid": true
+},
+{
+"country": "AU",
+"input": "51751552404",
+"valid": true
+},
+{
+"country": "AU",
+"input": "52155681588",
+"valid": true
+},
+{
+"country": "AU",
+"input": "68347520333",
+"valid": true
+},
+{
+"country": "AU",
+"input": "74660119836",
+"valid": true
+},
+{
+"country": "AU",
+"input": "77322342063",
+"valid": true
+},
+{
+"country": "AU",
+"input": "90118013622",
+"valid": true
+},
+{
+"country": "AU",
+"input": "92042100085",
+"valid": true
+},
+{
+"country": "AU",
+"input": "95129106114",
+"valid": true
+},
+{
+"country": "AU",
+"input": "06660119836",
+"valid": false
+},
+{
+"country": "AU",
+"input": "53258920611",
+"valid": false
+},
+{
+"country": "AU",
+"input": "85703827290",
+"valid": false
+},
+{
+"country": "AU",
+"input": "72879809733",
+"valid": false
+},
+{
+"country": "AU",
+"input": "57258920611",
+"valid": false
+},
+{
+"country": "AU",
+"input": "16751552404",
+"valid": false
+},
+{
+"country": "AU",
+"input": "23048972961",
+"valid": false
+},
+{
+"country": "AU",
+"input": "91751552404",
+"valid": false
+},
+{
+"country": "AU",
+"input": "51703827290",
+"valid": false
+},
+{
+"country": "AU",
+"input": "96347520333",
+"valid": false
+},
+{
+"country": "AU",
+"input": "79155681588",
+"valid": false
+},
+{
+"country": "AU",
+"input": "36118013622",
+"valid": false
+},
+{
+"country": "AU",
+"input": "040459836",
+"valid": true
+},
+{
+"country": "AU",
+"input": "116281380",
+"valid": true
+},
+{
+"country": "AU",
+"input": "117157990",
+"valid": true
+},
+{
+"country": "AU",
+"input": "123887972",
+"valid": true
+},
+{
+"country": "AU",
+"input": "249291316",
+"valid": true
+},
+{
+"country": "AU",
+"input": "357903087",
+"valid": true
+},
+{
+"country": "AU",
+"input": "368027472",
+"valid": true
+},
+{
+"country": "AU",
+"input": "598151930",
+"valid": true
+},
+{
+"country": "AU",
+"input": "648502327",
+"valid": true
+},
+{
+"country": "AU",
+"input": "782043270",
+"valid": true
+},
+{
+"country": "AU",
+"input": "842675101",
+"valid": true
+},
+{
+"country": "AU",
+"input": "963622157",
+"valid": true
+},
+{
+"country": "AU",
+"input": "249291315",
+"valid": false
+},
+{
+"country": "AU",
+"input": "368027474",
+"valid": false
+},
+{
+"country": "AU",
+"input": "963622152",
+"valid": false
+},
+{
+"country": "AU",
+"input": "249291313",
+"valid": false
+},
+{
+"country": "AU",
+"input": "842675100",
+"valid": false
+},
+{
+"country": "AU",
+"input": "963622154",
+"valid": false
+},
+{
+"country": "AU",
+"input": "842675106",
+"valid": false
+},
+{
+"country": "AU",
+"input": "963622155",
+"valid": false
+},
+{
+"country": "AU",
+"input": "963622151",
+"valid": false
+},
+{
+"country": "AU",
+"input": "598151932",
+"valid": false
+},
+{
+"country": "AU",
+"input": "357903085",
+"valid": false
+},
+{
+"country": "AU",
+"input": "368027478",
+"valid": false
+},
+{
+"country": "IN",
+"input": "04GVGFA9058U8Z5",
+"valid": true
+},
+{
+"country": "IN",
+"input": "04HULCW5170O1ZF",
+"valid": true
+},
+{
+"country": "IN",
+"input": "04SKCLD8891J8ZI",
+"valid": true
+},
+{
+"country": "IN",
+"input": "10TEXGR5944C9Z3",
+"valid": true
+},
+{
+"country": "IN",
+"input": "10XZKGL5367JBZT",
+"valid": true
+},
+{
+"country": "IN",
+"input": "12XAQLS3541M3ZU",
+"valid": true
+},
+{
+"country": "IN",
+"input": "14FGLJL9219AAZJ",
+"valid": true
+},
+{
+"country": "IN",
+"input": "22FGWJQ0854H9Z2",
+"valid": true
+},
+{
+"country": "IN",
+"input": "22NNQBU6703YAZY",
+"valid": true
+},
+{
+"country": "IN",
+"input": "27SDITU4643U9ZH",
+"valid": true
+},
+{
+"country": "IN",
+"input": "28VUABN8011GCZP",
+"valid": true
+},
+{
+"country": "IN",
+"input": "30KUVLH7545Q5ZO",
+"valid": true
+},
+{
+"country": "IN",
+"input": "04GVGFA9058U8ZK",
+"valid": false
+},
+{
+"country": "IN",
+"input": "14FGLJL9219AAZX",
+"valid": false
+},
+{
+"country": "IN",
+"input": "04HULCW5170O1Z8",
+"valid": false
+},
+{
+"country": "IN",
+"input": "22NNQBU6703YAZX",
+"valid": false
+},
+{
+"country": "IN",
+"input": "04HULCW5170O1ZE",
+"valid": false
+},
+{
+"country": "IN",
+"input": "22FGWJQ0854H9Z5",
+"valid": false
+},
+{
+"country": "IN",
+"input": "14FGLJL9219AAZB",
+"valid": false
+},
+{
+"country": "IN",
+"input": "04GVGFA9058U8ZG",
+"valid": false
+},
+{
+"country": "IN",
+"input": "04HULCW5170O1ZU",
+"valid": false
+},
+{
+"country": "IN",
+"input": "27SDITU4643U9ZQ",
+"valid": false
+},
+{
+"country": "IN",
+"input": "22NNQBU6703YAZI",
+"valid": false
+},
+{
+"country": "IN",
+"input": "04SKCLD8891J8ZD",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE097115500",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE106080179",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE160156617",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE266742257",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE480564010",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE488038009",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE598285047",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE600388753",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE689982892",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE771966799",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE858050516",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE997935034",
+"valid": true
+},
+{
+"country": "CH",
+"input": "CHE160156613",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE598285042",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE600388752",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE771966795",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE598285044",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE771966797",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE160156616",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE106080173",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE106080175",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE480564012",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE548463178",
+"valid": false
+},
+{
+"country": "CH",
+"input": "CHE598285041",
+"valid": false
+},
+{
+"country": "NO",
+"input": "083632127",
+"valid": true
+},
+{
+"country": "NO",
+"input": "127647631",
+"valid": true
+},
+{
+"country": "NO",
+"input": "201372437",
+"valid": true
+},
+{
+"country": "NO",
+"input": "378312833",
+"valid": true
+},
+{
+"country": "NO",
+"input": "423081295",
+"valid": true
+},
+{
+"country": "NO",
+"input": "483120451",
+"valid": true
+},
+{
+"country": "NO",
+"input": "522550477",
+"valid": true
+},
+{
+"country": "NO",
+"input": "638315300",
+"valid": true
+},
+{
+"country": "NO",
+"input": "659548003",
+"valid": true
+},
+{
+"country": "NO",
+"input": "671242831",
+"valid": true
+},
+{
+"country": "NO",
+"input": "745220533",
+"valid": true
+},
+{
+"country": "NO",
+"input": "880059238",
+"valid": true
+},
+{
+"country": "NO",
+"input": "522550475",
+"valid": false
+},
+{
+"country": "NO",
+"input": "671242830",
+"valid": false
+},
+{
+"country": "NO",
+"input": "745220530",
+"valid": false
+},
+{
+"country": "NO",
+"input": "659548007",
+"valid": false
+},
+{
+"country": "NO",
+"input": "423081292",
+"valid": false
+},
+{
+"country": "NO",
+"input": "659548000",
+"valid": false
+},
+{
+"country": "NO",
+"input": "083632126",
+"valid": false
+},
+{
+"country": "NO",
+"input": "659548001",
+"valid": false
+},
+{
+"country": "NO",
+"input": "659548005",
+"valid": false
+},
+{
+"country": "NO",
+"input": "483120459",
+"valid": false
+},
+{
+"country": "NO",
+"input": "083632121",
+"valid": false
+},
+{
+"country": "NO",
+"input": "880059237",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "10260299",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "15898348",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "16000094",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "23459205",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "25921429",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "40097317",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "45752143",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "73763703",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "93036115",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "93436660",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "94599555",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "98158219",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "16000092",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "25921425",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "10260294",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "23459200",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "25921423",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "23459202",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "73763707",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "16000096",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "40097314",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "16000097",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "93436668",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "15898346",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "104873603",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "121792257",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "124211638",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "125736262",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "128818887",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "133274758",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "133400435",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "134722444",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "137647370",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "140332178",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "141578278",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "142911760",
+"valid": true
+},
+{
+"country": "NZ",
+"input": "125736260",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "142911762",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "133274753",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "133400439",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "141578272",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "104873604",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "141578277",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "128818884",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "133400437",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "133274756",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "141578276",
+"valid": false
+},
+{
+"country": "NZ",
+"input": "141578275",
+"valid": false
+},
+{
+"country": "BR",
+"input": "03465578358170",
+"valid": true
+},
+{
+"country": "BR",
+"input": "10077721166043",
+"valid": true
+},
+{
+"country": "BR",
+"input": "12302276706391",
+"valid": true
+},
+{
+"country": "BR",
+"input": "18743253537190",
+"valid": true
+},
+{
+"country": "BR",
+"input": "27996835920703",
+"valid": true
+},
+{
+"country": "BR",
+"input": "34702840670008",
+"valid": true
+},
+{
+"country": "BR",
+"input": "36728352528002",
+"valid": true
+},
+{
+"country": "BR",
+"input": "52516924550645",
+"valid": true
+},
+{
+"country": "BR",
+"input": "69708206388205",
+"valid": true
+},
+{
+"country": "BR",
+"input": "71983710757481",
+"valid": true
+},
+{
+"country": "BR",
+"input": "87334122687491",
+"valid": true
+},
+{
+"country": "BR",
+"input": "93952295588737",
+"valid": true
+},
+{
+"country": "BR",
+"input": "10077721166040",
+"valid": false
+},
+{
+"country": "BR",
+"input": "27996835920757",
+"valid": false
+},
+{
+"country": "BR",
+"input": "71983710757402",
+"valid": false
+},
+{
+"country": "BR",
+"input": "12302276706303",
+"valid": false
+},
+{
+"country": "BR",
+"input": "52516924550658",
+"valid": false
+},
+{
+"country": "BR",
+"input": "71983710757415",
+"valid": false
+},
+{
+"country": "BR",
+"input": "69708206388297",
+"valid": false
+},
+{
+"country": "BR",
+"input": "87334122687471",
+"valid": false
+},
+{
+"country": "BR",
+"input": "52516924550643",
+"valid": false
+},
+{
+"country": "BR",
+"input": "34702840670076",
+"valid": false
+},
+{
+"country": "BR",
+"input": "27996835920735",
+"valid": false
+},
+{
+"country": "BR",
+"input": "10077721166018",
+"valid": false
+},
+{
+"country": "MX",
+"input": "AAA0208186R1",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAA090916972",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAA090929KL2",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAB150508AK4",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAC120511EMA",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAD240203T7A",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAD280206FW0",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAE1304267MA",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAF111019QW8",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAG221124U42",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAH110518VV0",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAI200808625",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAAB1903228Z6",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAAF011007AY7",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAAK020520HA0",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAEI260414RU3",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAEY130711NZ5",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAFC2909264T6",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAFF130627H33",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAGA261025AJ3",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAGI200706NH4",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAGW221128734",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AAIM031211FGA",
+"valid": true
+},
+{
+"country": "MX",
+"input": "AALD130531EH1",
+"valid": true
+},
+{
+"country": "MX",
+"input": "CAKA100222DMA",
+"valid": false
+},
+{
+"country": "JP",
+"input": "1424618189388",
+"valid": true
+},
+{
+"country": "JP",
+"input": "2617439174709",
+"valid": true
+},
+{
+"country": "JP",
+"input": "3193979889566",
+"valid": true
+},
+{
+"country": "JP",
+"input": "3587628154342",
+"valid": true
+},
+{
+"country": "JP",
+"input": "3874829224622",
+"valid": true
+},
+{
+"country": "JP",
+"input": "4751583523938",
+"valid": true
+},
+{
+"country": "JP",
+"input": "4940266855532",
+"valid": true
+},
+{
+"country": "JP",
+"input": "7261885016027",
+"valid": true
+},
+{
+"country": "JP",
+"input": "7723351476150",
+"valid": true
+},
+{
+"country": "JP",
+"input": "8096860067151",
+"valid": true
+},
+{
+"country": "JP",
+"input": "8824764752819",
+"valid": true
+},
+{
+"country": "JP",
+"input": "9935782543442",
+"valid": true
+},
+{
+"country": "JP",
+"input": "9617439174709",
+"valid": false
+},
+{
+"country": "JP",
+"input": "5940266855532",
+"valid": false
+},
+{
+"country": "JP",
+"input": "3617439174709",
+"valid": false
+},
+{
+"country": "JP",
+"input": "6261885016027",
+"valid": false
+},
+{
+"country": "JP",
+"input": "7424618189388",
+"valid": false
+},
+{
+"country": "JP",
+"input": "8874829224622",
+"valid": false
+},
+{
+"country": "JP",
+"input": "5587628154342",
+"valid": false
+},
+{
+"country": "JP",
+"input": "3261885016027",
+"valid": false
+},
+{
+"country": "JP",
+"input": "4587628154342",
+"valid": false
+},
+{
+"country": "JP",
+"input": "6617439174709",
+"valid": false
+},
+{
+"country": "JP",
+"input": "2751583523938",
+"valid": false
+},
+{
+"country": "JP",
+"input": "1193979889566",
+"valid": false
+},
+{
+"country": "SG",
+"input": "07333792K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "09419055X",
+"valid": true
+},
+{
+"country": "SG",
+"input": "27308071K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "28641996C",
+"valid": true
+},
+{
+"country": "SG",
+"input": "46770311J",
+"valid": true
+},
+{
+"country": "SG",
+"input": "54545316W",
+"valid": true
+},
+{
+"country": "SG",
+"input": "58071775E",
+"valid": true
+},
+{
+"country": "SG",
+"input": "63577513A",
+"valid": true
+},
+{
+"country": "SG",
+"input": "63686406E",
+"valid": true
+},
+{
+"country": "SG",
+"input": "77097912B",
+"valid": true
+},
+{
+"country": "SG",
+"input": "78504616W",
+"valid": true
+},
+{
+"country": "SG",
+"input": "99595566B",
+"valid": true
+},
+{
+"country": "SG",
+"input": "99595566U",
+"valid": false
+},
+{
+"country": "SG",
+"input": "46770311G",
+"valid": false
+},
+{
+"country": "SG",
+"input": "77097912C",
+"valid": false
+},
+{
+"country": "SG",
+"input": "09419055V",
+"valid": false
+},
+{
+"country": "SG",
+"input": "63686406R",
+"valid": false
+},
+{
+"country": "SG",
+"input": "54545316N",
+"valid": false
+},
+{
+"country": "SG",
+"input": "09419055K",
+"valid": false
+},
+{
+"country": "SG",
+"input": "27308071I",
+"valid": false
+},
+{
+"country": "SG",
+"input": "07333792Y",
+"valid": false
+},
+{
+"country": "SG",
+"input": "28641996N",
+"valid": false
+},
+{
+"country": "SG",
+"input": "63577513F",
+"valid": false
+},
+{
+"country": "SG",
+"input": "09419055S",
+"valid": false
+},
+{
+"country": "SG",
+"input": "197387413G",
+"valid": true
+},
+{
+"country": "SG",
+"input": "198410995K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "198670954E",
+"valid": true
+},
+{
+"country": "SG",
+"input": "199132751K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "199153409D",
+"valid": true
+},
+{
+"country": "SG",
+"input": "199214889K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "199302439C",
+"valid": true
+},
+{
+"country": "SG",
+"input": "200097249N",
+"valid": true
+},
+{
+"country": "SG",
+"input": "200853874R",
+"valid": true
+},
+{
+"country": "SG",
+"input": "201465884K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "201971570C",
+"valid": true
+},
+{
+"country": "SG",
+"input": "201990839M",
+"valid": true
+},
+{
+"country": "SG",
+"input": "199214889U",
+"valid": false
+},
+{
+"country": "SG",
+"input": "198670954H",
+"valid": false
+},
+{
+"country": "SG",
+"input": "198410995X",
+"valid": false
+},
+{
+"country": "SG",
+"input": "201990839P",
+"valid": false
+},
+{
+"country": "SG",
+"input": "201465884V",
+"valid": false
+},
+{
+"country": "SG",
+"input": "200097249S",
+"valid": false
+},
+{
+"country": "SG",
+"input": "197387413H",
+"valid": false
+},
+{
+"country": "SG",
+"input": "201990839Z",
+"valid": false
+},
+{
+"country": "SG",
+"input": "199302439P",
+"valid": false
+},
+{
+"country": "SG",
+"input": "201465884X",
+"valid": false
+},
+{
+"country": "SG",
+"input": "199132751O",
+"valid": false
+},
+{
+"country": "SG",
+"input": "200097249T",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S01SS8208H",
+"valid": true
+},
+{
+"country": "SG",
+"input": "S03MQ1924J",
+"valid": true
+},
+{
+"country": "SG",
+"input": "S11PF7759J",
+"valid": true
+},
+{
+"country": "SG",
+"input": "S14FC6793A",
+"valid": true
+},
+{
+"country": "SG",
+"input": "S19LP2921K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T09SS7011B",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T14CC4239E",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T15PF7751K",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T17SS3371A",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T18CC8263F",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T23RF8917D",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T25LP0814G",
+"valid": true
+},
+{
+"country": "SG",
+"input": "T09SS7011G",
+"valid": false
+},
+{
+"country": "SG",
+"input": "T15PF7751H",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S11PF7759V",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S03MQ19245",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S01SS8208V",
+"valid": false
+},
+{
+"country": "SG",
+"input": "T25LP08149",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S11PF7759D",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S14FC6793G",
+"valid": false
+},
+{
+"country": "SG",
+"input": "T15PF77518",
+"valid": false
+},
+{
+"country": "SG",
+"input": "T09SS70116",
+"valid": false
+},
+{
+"country": "SG",
+"input": "S19LP29216",
+"valid": false
+},
+{
+"country": "SG",
+"input": "T17SS3371J",
+"valid": false
+},
+{
+"country": "KR",
+"input": "1027465799",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1089697855",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1153703908",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1207688470",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1467254237",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1478507664",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1490504219",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1568500559",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1587115096",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1666858638",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1687767054",
+"valid": true
+},
+{
+"country": "KR",
+"input": "1938898172",
+"valid": true
+},
+{
+"country": "KR",
+"input": "6510016336",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0676198384",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0316133164",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0690479429",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0212978251",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0495643443",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0370881078",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0335057217",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0931314760",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0487298424",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0400205396",
+"valid": false
+},
+{
+"country": "KR",
+"input": "0468929951",
+"valid": false
+},
+{
+"country": "RU",
+"input": "0684332361",
+"valid": true
+},
+{
+"country": "RU",
+"input": "1000214406",
+"valid": true
+},
+{
+"country": "RU",
+"input": "1406174916",
+"valid": true
+},
+{
+"country": "RU",
+"input": "1912152620",
+"valid": true
+},
+{
+"country": "RU",
+"input": "2182561428",
+"valid": true
+},
+{
+"country": "RU",
+"input": "2372371513",
+"valid": true
+},
+{
+"country": "RU",
+"input": "2785012280",
+"valid": true
+},
+{
+"country": "RU",
+"input": "5366759938",
+"valid": true
+},
+{
+"country": "RU",
+"input": "6206627830",
+"valid": true
+},
+{
+"country": "RU",
+"input": "6603419145",
+"valid": true
+},
+{
+"country": "RU",
+"input": "6694370825",
+"valid": true
+},
+{
+"country": "RU",
+"input": "7410250293",
+"valid": true
+},
+{
+"country": "RU",
+"input": "7410250297",
+"valid": false
+},
+{
+"country": "RU",
+"input": "2785012286",
+"valid": false
+},
+{
+"country": "RU",
+"input": "2182561422",
+"valid": false
+},
+{
+"country": "RU",
+"input": "1000214403",
+"valid": false
+},
+{
+"country": "RU",
+"input": "0684332360",
+"valid": false
+},
+{
+"country": "RU",
+"input": "1912152623",
+"valid": false
+},
+{
+"country": "RU",
+"input": "0684332365",
+"valid": false
+},
+{
+"country": "RU",
+"input": "1912152621",
+"valid": false
+},
+{
+"country": "RU",
+"input": "6206627832",
+"valid": false
+},
+{
+"country": "RU",
+"input": "6206627835",
+"valid": false
+},
+{
+"country": "RU",
+"input": "1912152626",
+"valid": false
+},
+{
+"country": "RU",
+"input": "1912152625",
+"valid": false
+},
+{
+"country": "RU",
+"input": "047452711551",
+"valid": true
+},
+{
+"country": "RU",
+"input": "047473439120",
+"valid": true
+},
+{
+"country": "RU",
+"input": "112683694241",
+"valid": true
+},
+{
+"country": "RU",
+"input": "117659433992",
+"valid": true
+},
+{
+"country": "RU",
+"input": "400794382920",
+"valid": true
+},
+{
+"country": "RU",
+"input": "601938168660",
+"valid": true
+},
+{
+"country": "RU",
+"input": "636110838151",
+"valid": true
+},
+{
+"country": "RU",
+"input": "705531872030",
+"valid": true
+},
+{
+"country": "RU",
+"input": "788479936661",
+"valid": true
+},
+{
+"country": "RU",
+"input": "863166339259",
+"valid": true
+},
+{
+"country": "RU",
+"input": "905399998943",
+"valid": true
+},
+{
+"country": "RU",
+"input": "995516004634",
+"valid": true
+},
+{
+"country": "RU",
+"input": "788479936699",
+"valid": false
+},
+{
+"country": "RU",
+"input": "636110838102",
+"valid": false
+},
+{
+"country": "RU",
+"input": "112683694203",
+"valid": false
+},
+{
+"country": "RU",
+"input": "863166339288",
+"valid": false
+},
+{
+"country": "RU",
+"input": "636110838159",
+"valid": false
+},
+{
+"country": "RU",
+"input": "112683694216",
+"valid": false
+},
+{
+"country": "RU",
+"input": "047473439146",
+"valid": false
+},
+{
+"country": "RU",
+"input": "636110838106",
+"valid": false
+},
+{
+"country": "RU",
+"input": "863166339251",
+"valid": false
+},
+{
+"country": "RU",
+"input": "047473439115",
+"valid": false
+},
+{
+"country": "RU",
+"input": "047452711506",
+"valid": false
+},
+{
+"country": "RU",
+"input": "995516004697",
+"valid": false
+},
+{
+"country": "TR",
+"input": "0626807609",
+"valid": true
+},
+{
+"country": "TR",
+"input": "1649005538",
+"valid": true
+},
+{
+"country": "TR",
+"input": "3097240215",
+"valid": true
+},
+{
+"country": "TR",
+"input": "4597455617",
+"valid": true
+},
+{
+"country": "TR",
+"input": "4995938803",
+"valid": true
+},
+{
+"country": "TR",
+"input": "5072108487",
+"valid": true
+},
+{
+"country": "TR",
+"input": "5374088132",
+"valid": true
+},
+{
+"country": "TR",
+"input": "6718890772",
+"valid": true
+},
+{
+"country": "TR",
+"input": "7594689334",
+"valid": true
+},
+{
+"country": "TR",
+"input": "7597021059",
+"valid": true
+},
+{
+"country": "TR",
+"input": "7922161411",
+"valid": true
+},
+{
+"country": "TR",
+"input": "8495478750",
+"valid": true
+},
+{
+"country": "TR",
+"input": "3097240219",
+"valid": false
+},
+{
+"country": "TR",
+"input": "0626807600",
+"valid": false
+},
+{
+"country": "TR",
+"input": "4597455611",
+"valid": false
+},
+{
+"country": "TR",
+"input": "0626807602",
+"valid": false
+},
+{
+"country": "TR",
+"input": "7922161415",
+"valid": false
+},
+{
+"country": "TR",
+"input": "1649005539",
+"valid": false
+},
+{
+"country": "TR",
+"input": "0626807604",
+"valid": false
+},
+{
+"country": "TR",
+"input": "5072108489",
+"valid": false
+},
+{
+"country": "TR",
+"input": "4597455613",
+"valid": false
+},
+{
+"country": "TR",
+"input": "4597455610",
+"valid": false
+},
+{
+"country": "TR",
+"input": "5374088135",
+"valid": false
+},
+{
+"country": "TR",
+"input": "0626807605",
+"valid": false
+},
+{
+"country": "AR",
+"input": "20191538944",
+"valid": true
+},
+{
+"country": "AR",
+"input": "20707837250",
+"valid": true
+},
+{
+"country": "AR",
+"input": "23062222387",
+"valid": true
+},
+{
+"country": "AR",
+"input": "23142873419",
+"valid": true
+},
+{
+"country": "AR",
+"input": "27352260814",
+"valid": true
+},
+{
+"country": "AR",
+"input": "27422931215",
+"valid": true
+},
+{
+"country": "AR",
+"input": "27631035227",
+"valid": true
+},
+{
+"country": "AR",
+"input": "33249716176",
+"valid": true
+},
+{
+"country": "AR",
+"input": "33556645693",
+"valid": true
+},
+{
+"country": "AR",
+"input": "33579697313",
+"valid": true
+},
+{
+"country": "AR",
+"input": "33627457907",
+"valid": true
+},
+{
+"country": "AR",
+"input": "50944091111",
+"valid": true
+},
+{
+"country": "AR",
+"input": "33579697315",
+"valid": false
+},
+{
+"country": "AR",
+"input": "33627457908",
+"valid": false
+},
+{
+"country": "AR",
+"input": "23062222380",
+"valid": false
+},
+{
+"country": "AR",
+"input": "33627457904",
+"valid": false
+},
+{
+"country": "AR",
+"input": "27422931214",
+"valid": false
+},
+{
+"country": "AR",
+"input": "33627457900",
+"valid": false
+},
+{
+"country": "AR",
+"input": "33556645690",
+"valid": false
+},
+{
+"country": "AR",
+"input": "20191538948",
+"valid": false
+},
+{
+"country": "AR",
+"input": "23062222385",
+"valid": false
+},
+{
+"country": "AR",
+"input": "27631035229",
+"valid": false
+},
+{
+"country": "AR",
+"input": "33249716172",
+"valid": false
+},
+{
+"country": "AR",
+"input": "20707837258",
+"valid": false
+},
+{
+"country": "CL",
+"input": "008155550",
+"valid": true
+},
+{
+"country": "CL",
+"input": "168759215",
+"valid": true
+},
+{
+"country": "CL",
+"input": "182423173",
+"valid": true
+},
+{
+"country": "CL",
+"input": "182788422",
+"valid": true
+},
+{
+"country": "CL",
+"input": "25311701",
+"valid": true
+},
+{
+"country": "CL",
+"input": "259292476",
+"valid": true
+},
+{
+"country": "CL",
+"input": "396664909",
+"valid": true
+},
+{
+"country": "CL",
+"input": "44642632K",
+"valid": true
+},
+{
+"country": "CL",
+"input": "49424930",
+"valid": true
+},
+{
+"country": "CL",
+"input": "63710938",
+"valid": true
+},
+{
+"country": "CL",
+"input": "69229077",
+"valid": true
+},
+{
+"country": "CL",
+"input": "8410230K",
+"valid": true
+},
+{
+"country": "CL",
+"input": "84102309",
+"valid": false
+},
+{
+"country": "CL",
+"input": "182423178",
+"valid": false
+},
+{
+"country": "CL",
+"input": "84102301",
+"valid": false
+},
+{
+"country": "CL",
+"input": "69229079",
+"valid": false
+},
+{
+"country": "CL",
+"input": "008155551",
+"valid": false
+},
+{
+"country": "CL",
+"input": "168759212",
+"valid": false
+},
+{
+"country": "CL",
+"input": "182788426",
+"valid": false
+},
+{
+"country": "CL",
+"input": "69229071",
+"valid": false
+},
+{
+"country": "CL",
+"input": "446426328",
+"valid": false
+},
+{
+"country": "CL",
+"input": "25311708",
+"valid": false
+},
+{
+"country": "CL",
+"input": "168759218",
+"valid": false
+},
+{
+"country": "CL",
+"input": "008155556",
+"valid": false
+},
+{
+"country": "CO",
+"input": "03943868",
+"valid": true
+},
+{
+"country": "CO",
+"input": "07743083100",
+"valid": true
+},
+{
+"country": "CO",
+"input": "11328228",
+"valid": true
+},
+{
+"country": "CO",
+"input": "2901179397",
+"valid": true
+},
+{
+"country": "CO",
+"input": "38015714182",
+"valid": true
+},
+{
+"country": "CO",
+"input": "4631235681",
+"valid": true
+},
+{
+"country": "CO",
+"input": "52104717928567",
+"valid": true
+},
+{
+"country": "CO",
+"input": "603967994192",
+"valid": true
+},
+{
+"country": "CO",
+"input": "609689551",
+"valid": true
+},
+{
+"country": "CO",
+"input": "85391407",
+"valid": true
+},
+{
+"country": "CO",
+"input": "87890091",
+"valid": true
+},
+{
+"country": "CO",
+"input": "9701855314412",
+"valid": true
+},
+{
+"country": "CO",
+"input": "603967994198",
+"valid": false
+},
+{
+"country": "CO",
+"input": "609689558",
+"valid": false
+},
+{
+"country": "CO",
+"input": "85391409",
+"valid": false
+},
+{
+"country": "CO",
+"input": "07743083104",
+"valid": false
+},
+{
+"country": "CO",
+"input": "2901179394",
+"valid": false
+},
+{
+"country": "CO",
+"input": "603967994197",
+"valid": false
+},
+{
+"country": "CO",
+"input": "2901179391",
+"valid": false
+},
+{
+"country": "CO",
+"input": "07743083106",
+"valid": false
+},
+{
+"country": "CO",
+"input": "38015714183",
+"valid": false
+},
+{
+"country": "CO",
+"input": "38015714189",
+"valid": false
+},
+{
+"country": "CO",
+"input": "85391405",
+"valid": false
+},
+{
+"country": "CO",
+"input": "87890097",
+"valid": false
+}
+]
+}

@@ -1,0 +1,7 @@
+{
+  "url": "/v1/usage",
+  "method": "GET",
+  "response": {
+    "output": "{{body}}"
+  }
+}

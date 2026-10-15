@@ -1,0 +1,11 @@
+{
+  "name": "@tbve/shell-monday",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "monday.com app: Item View + custom automation action block for tax-ID verification.",
+  "exports": {
+    ".": "./index.js",
+    "./public/*": "./public/*"
+  }
+}

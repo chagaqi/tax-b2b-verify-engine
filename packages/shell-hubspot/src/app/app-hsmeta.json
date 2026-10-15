@@ -1,0 +1,35 @@
+{
+  "uid": "tax_id_verify_app",
+  "type": "app",
+  "config": {
+    "name": "Tax ID Verify",
+    "description": "Verify company VAT / tax IDs against EU VIES and 49 national check-digit rules, score the email domain, and attach a signed audit certificate PDF — from a CRM card or any workflow.",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": ["https://verify.taxb2b.app/v1/install/hubspot/callback"],
+      "requiredScopes": [
+        "oauth",
+        "crm.objects.companies.read",
+        "crm.objects.companies.write",
+        "crm.objects.contacts.read",
+        "crm.objects.contacts.write",
+        "crm.schemas.companies.write",
+        "crm.schemas.contacts.write",
+        "automation"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": {
+      "fetch": ["https://verify.taxb2b.app"],
+      "iframe": [],
+      "img": []
+    },
+    "support": {
+      "supportEmail": "support@taxb2b.app",
+      "documentationUrl": "https://verify.taxb2b.app/playground",
+      "supportUrl": "https://verify.taxb2b.app/playground"
+    }
+  }
+}

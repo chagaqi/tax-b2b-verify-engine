@@ -1,0 +1,11 @@
+{
+  "url": "/v1/enrich/company",
+  "method": "POST",
+  "body": {
+    "email": "{{parameters.email}}",
+    "domain": "{{parameters.domain}}"
+  },
+  "response": {
+    "output": "{{body}}"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "baseUrl": "https://verify.taxb2b.app",
+  "headers": {
+    "x-api-key": "{{connection.apiKey}}",
+    "user-agent": "Make.com Tax ID Verify"
+  },
+  "response": {
+    "error": {
+      "message": "[{{statusCode}}] {{body.error.message}}",
+      "type": "DataError"
+    },
+    "error.402": {
+      "message": "{{body.error.message}} — upgrade: {{body.error.details.upgradeUrl}}",
+      "type": "AccountValidationError"
+    },
+    "error.429": {
+      "message": "{{body.error.message}}",
+      "type": "RateLimitError"
+    },
+    "error.401": {
+      "message": "Invalid API key — reconnect the Tax ID Verify connection.",
+      "type": "InvalidConfigurationError"
+    }
+  },
+  "log": {
+    "sanitize": [
+      "request.headers.x-api-key"
+    ]
+  }
+}

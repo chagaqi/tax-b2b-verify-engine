@@ -1,0 +1,138 @@
+[
+  {
+    "name": "verdict",
+    "type": "text",
+    "label": "Verdict"
+  },
+  {
+    "name": "valid",
+    "type": "boolean",
+    "label": "Valid"
+  },
+  {
+    "name": "summary",
+    "type": "text",
+    "label": "Summary"
+  },
+  {
+    "name": "confidence",
+    "type": "text",
+    "label": "Confidence"
+  },
+  {
+    "name": "fallback",
+    "type": "boolean",
+    "label": "Registry fallback used"
+  },
+  {
+    "name": "checkedAt",
+    "type": "date",
+    "label": "Checked at"
+  },
+  {
+    "name": "taxId",
+    "type": "collection",
+    "label": "Tax ID",
+    "spec": [
+      {
+        "name": "formatted",
+        "type": "text",
+        "label": "Formatted"
+      },
+      {
+        "name": "normalized",
+        "type": "text",
+        "label": "Normalized"
+      },
+      {
+        "name": "jurisdiction",
+        "type": "text",
+        "label": "Jurisdiction"
+      },
+      {
+        "name": "country",
+        "type": "text",
+        "label": "Country"
+      },
+      {
+        "name": "countryName",
+        "type": "text",
+        "label": "Country name"
+      },
+      {
+        "name": "schemeName",
+        "type": "text",
+        "label": "Scheme"
+      },
+      {
+        "name": "checksum",
+        "type": "text",
+        "label": "Check digit"
+      },
+      {
+        "name": "algorithm",
+        "type": "text",
+        "label": "Algorithm"
+      }
+    ]
+  },
+  {
+    "name": "registry",
+    "type": "collection",
+    "label": "Registry",
+    "spec": [
+      {
+        "name": "source",
+        "type": "text",
+        "label": "Source"
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Registered name"
+      },
+      {
+        "name": "address",
+        "type": "text",
+        "label": "Registered address"
+      },
+      {
+        "name": "consultationNumber",
+        "type": "text",
+        "label": "VIES consultation number"
+      }
+    ]
+  },
+  {
+    "name": "certificate",
+    "type": "collection",
+    "label": "Certificate",
+    "spec": [
+      {
+        "name": "id",
+        "type": "text",
+        "label": "Certificate ID"
+      },
+      {
+        "name": "pdfUrl",
+        "type": "url",
+        "label": "PDF download URL"
+      },
+      {
+        "name": "verifyUrl",
+        "type": "url",
+        "label": "Public verification URL"
+      },
+      {
+        "name": "pdfSha256",
+        "type": "text",
+        "label": "PDF SHA-256"
+      }
+    ]
+  }
+]

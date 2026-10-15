@@ -1,0 +1,102 @@
+[
+  {
+    "name": "tenantId",
+    "type": "text",
+    "label": "Account ID"
+  },
+  {
+    "name": "plan",
+    "type": "collection",
+    "label": "Plan",
+    "spec": [
+      {
+        "name": "id",
+        "type": "text",
+        "label": "Plan ID"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Plan name"
+      }
+    ]
+  },
+  {
+    "name": "usage",
+    "type": "collection",
+    "label": "Usage this month",
+    "spec": [
+      {
+        "name": "taxVerifications",
+        "type": "collection",
+        "label": "Tax verifications",
+        "spec": [
+          {
+            "name": "used",
+            "type": "number",
+            "label": "Used"
+          },
+          {
+            "name": "limit",
+            "type": "number",
+            "label": "Limit"
+          },
+          {
+            "name": "remaining",
+            "type": "number",
+            "label": "Remaining"
+          }
+        ]
+      },
+      {
+        "name": "enrichments",
+        "type": "collection",
+        "label": "Enrichments",
+        "spec": [
+          {
+            "name": "used",
+            "type": "number",
+            "label": "Used"
+          },
+          {
+            "name": "limit",
+            "type": "number",
+            "label": "Limit"
+          },
+          {
+            "name": "remaining",
+            "type": "number",
+            "label": "Remaining"
+          }
+        ]
+      },
+      {
+        "name": "certificates",
+        "type": "collection",
+        "label": "Certificates",
+        "spec": [
+          {
+            "name": "used",
+            "type": "number",
+            "label": "Used"
+          },
+          {
+            "name": "limit",
+            "type": "number",
+            "label": "Limit"
+          },
+          {
+            "name": "remaining",
+            "type": "number",
+            "label": "Remaining"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "upgradeUrl",
+    "type": "url",
+    "label": "Upgrade URL"
+  }
+]

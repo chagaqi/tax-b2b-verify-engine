@@ -1,0 +1,24 @@
+{
+  "verdict": "registry_verified",
+  "valid": true,
+  "summary": "IE6388047V is active in EU VIES (GOOGLE IRELAND LIMITED).",
+  "confidence": "high",
+  "fallback": false,
+  "checkedAt": "2026-10-15T10:00:00.000Z",
+  "taxId": {
+    "formatted": "IE6388047V",
+    "normalized": "6388047V",
+    "jurisdiction": "IE",
+    "country": "IE",
+    "countryName": "Ireland",
+    "schemeName": "EU VAT identification number",
+    "checksum": "valid",
+    "algorithm": "Weighted MOD 23 letter"
+  },
+  "registry": {
+    "source": "vies",
+    "status": "valid",
+    "name": "GOOGLE IRELAND LIMITED",
+    "address": "3RD FLOOR, GORDON HOUSE, BARROW STREET, DUBLIN 4"
+  }
+}

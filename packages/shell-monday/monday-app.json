@@ -1,0 +1,48 @@
+{
+  "$comment": "monday.com Developer Center configuration for Tax ID Verify (features are created in the Developer Center; this file is the source of truth we copy from and test against).",
+  "app": {
+    "name": "Tax ID Verify",
+    "description": "Verify VAT / tax IDs on board items against EU VIES and 49 national check-digit rules, score the company domain and attach a signed audit certificate PDF.",
+    "oauthScopes": ["boards:read", "boards:write", "me:read"],
+    "secretsEnv": { "clientSecret": "MONDAY_CLIENT_SECRET", "signingSecret": "MONDAY_SIGNING_SECRET" },
+    "webhooks": { "lifecycle": "https://verify.taxb2b.app/v1/webhooks/monday" }
+  },
+  "features": [
+    {
+      "type": "AppFeatureItemView",
+      "name": "Tax ID Verify",
+      "url": "https://verify.taxb2b.app/apps/monday/item-view"
+    },
+    {
+      "type": "AppFeatureIntegration",
+      "name": "Tax ID Verify automations",
+      "customActions": [
+        {
+          "name": "Verify tax ID",
+          "runUrl": "https://verify.taxb2b.app/v1/integrations/monday/action",
+          "inputFields": [
+            { "key": "boardId", "type": "board", "required": true },
+            { "key": "itemId", "type": "item", "required": true },
+            { "key": "taxIdColumnId", "type": "column", "columnTypes": ["text"], "required": true },
+            { "key": "statusColumnId", "type": "column", "columnTypes": ["status"], "required": true },
+            { "key": "countryColumnId", "type": "column", "columnTypes": ["text", "country"], "required": false },
+            { "key": "summaryColumnId", "type": "column", "columnTypes": ["text"], "required": false }
+          ]
+        }
+      ],
+      "recipes": [
+        {
+          "sentence": "When an item is created, verify the tax ID in {taxIdColumnId} and set {statusColumnId}",
+          "trigger": "item_created",
+          "action": "Verify tax ID"
+        },
+        {
+          "sentence": "When {taxIdColumnId} changes, verify it and set {statusColumnId}",
+          "trigger": "column_value_changed",
+          "action": "Verify tax ID"
+        }
+      ]
+    }
+  ],
+  "statusLabels": ["Verified", "Not registered", "Valid checksum", "Valid format", "Invalid", "Missing tax ID"]
+}

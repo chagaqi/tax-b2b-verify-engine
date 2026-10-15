@@ -1,0 +1,34 @@
+{
+  "$comment": "Pipedrive Developer Hub configuration for the Tax ID Verify app. Pipedrive app extensions are configured in the Developer Hub UI; this file is the source of truth we copy from (and test against).",
+  "app": {
+    "name": "Tax ID Verify",
+    "callbackUrl": "https://verify.taxb2b.app/v1/install/pipedrive/callback",
+    "scopes": ["base", "deals:read", "contacts:read"],
+    "jwtSecretEnv": "PIPEDRIVE_JWT_SECRET"
+  },
+  "jsonPanels": [
+    {
+      "name": "Tax ID verification",
+      "location": "deal_details",
+      "apiEndpoint": "https://verify.taxb2b.app/v1/integrations/pipedrive/panel?resource=deal",
+      "authentication": "jwt",
+      "dataSchema": "panel-schema.json",
+      "actions": [{ "label": "Verify tax ID", "type": "custom_modal", "modal": "Verify tax ID" }]
+    },
+    {
+      "name": "Tax ID verification",
+      "location": "organization_details",
+      "apiEndpoint": "https://verify.taxb2b.app/v1/integrations/pipedrive/panel?resource=organization",
+      "authentication": "jwt",
+      "dataSchema": "panel-schema.json",
+      "actions": [{ "label": "Verify tax ID", "type": "custom_modal", "modal": "Verify tax ID" }]
+    }
+  ],
+  "customModals": [
+    {
+      "name": "Verify tax ID",
+      "iframeUrl": "https://verify.taxb2b.app/apps/pipedrive/modal",
+      "locations": ["deal_details", "organization_details"]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "name": "certificateId",
+    "type": "text",
+    "label": "Certificate ID",
+    "required": true,
+    "help": "The `certificate.id` returned by \"Verify a Tax ID\" (starts with `tvc_`)."
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "fileVersion": 1,
+  "generalCodeFiles": {
+    "base": "app/base.imljson",
+    "readme": "app/readme.md"
+  },
+  "app": {
+    "name": "tax-id-verify",
+    "label": "Tax ID Verify",
+    "description": "VAT / tax ID verification (EU VIES + 49 national check-digit rules), B2B domain enrichment and signed audit certificates.",
+    "version": "1.0.0",
+    "language": "en",
+    "theme": "#1d4ed8",
+    "audience": "global"
+  },
+  "components": {
+    "connection": {
+      "apiKey": {
+        "label": "Tax ID Verify API key",
+        "connectionType": "basic",
+        "codeFiles": {
+          "api": "app/connections/apiKey/api.imljson",
+          "parameters": "app/connections/apiKey/parameters.imljson"
+        }
+      }
+    },
+    "module": {
+      "verifyTaxId": {
+        "label": "Verify a Tax ID",
+        "description": "Validates a VAT / tax ID for 49 jurisdictions, confirms EU numbers in VIES and optionally issues a signed audit certificate PDF.",
+        "moduleType": "action",
+        "actionCrud": "read",
+        "connection": "apiKey",
+        "codeFiles": {
+          "api": "app/modules/verifyTaxId/api.imljson",
+          "mappableParams": "app/modules/verifyTaxId/mappable.imljson",
+          "interface": "app/modules/verifyTaxId/interface.imljson",
+          "samples": "app/modules/verifyTaxId/samples.imljson"
+        }
+      },
+      "enrichCompany": {
+        "label": "Enrich a Company Domain",
+        "description": "Classifies an email or domain (corporate / free / disposable), grades SPF/DMARC/DKIM security, and returns RDAP + website metadata.",
+        "moduleType": "action",
+        "actionCrud": "read",
+        "connection": "apiKey",
+        "codeFiles": {
+          "api": "app/modules/enrichCompany/api.imljson",
+          "mappableParams": "app/modules/enrichCompany/mappable.imljson",
+          "interface": "app/modules/enrichCompany/interface.imljson",
+          "samples": "app/modules/enrichCompany/samples.imljson"
+        }
+      },
+      "getCertificate": {
+        "label": "Get a Certificate",
+        "description": "Returns certificate details and a fresh signed PDF download link.",
+        "moduleType": "action",
+        "actionCrud": "read",
+        "connection": "apiKey",
+        "codeFiles": {
+          "api": "app/modules/getCertificate/api.imljson",
+          "mappableParams": "app/modules/getCertificate/mappable.imljson",
+          "interface": "app/modules/getCertificate/interface.imljson",
+          "samples": "app/modules/getCertificate/samples.imljson"
+        }
+      },
+      "getUsage": {
+        "label": "Get Usage",
+        "description": "Returns your plan and this month's usage.",
+        "moduleType": "action",
+        "actionCrud": "read",
+        "connection": "apiKey",
+        "codeFiles": {
+          "api": "app/modules/getUsage/api.imljson",
+          "mappableParams": "app/modules/getUsage/mappable.imljson",
+          "interface": "app/modules/getUsage/interface.imljson",
+          "samples": "app/modules/getUsage/samples.imljson"
+        }
+      }
+    },
+    "rpc": {
+      "listCountries": {
+        "label": "List supported countries",
+        "connection": "apiKey",
+        "codeFiles": {
+          "api": "app/rpcs/listCountries/api.imljson"
+        }
+      }
+    }
+  }
+}

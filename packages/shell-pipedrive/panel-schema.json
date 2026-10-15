@@ -1,0 +1,20 @@
+{
+  "data": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "header": { "type": "string" },
+        "status": { "type": "label", "label": "Status" },
+        "summary": { "type": "text", "label": "Summary" },
+        "country": { "type": "text", "label": "Jurisdiction" },
+        "registered_name": { "type": "text", "label": "Registered name" },
+        "registered_address": { "type": "text", "label": "Registered address" },
+        "checked_at": { "type": "date", "label": "Checked" },
+        "certificate": { "type": "link", "label": "Audit certificate" }
+      },
+      "required": ["id", "header", "status"]
+    }
+  }
+}

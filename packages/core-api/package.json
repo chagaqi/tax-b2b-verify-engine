@@ -1,0 +1,21 @@
+{
+  "name": "@tbve/core-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless Hono core: tax-ID checksums for 49 jurisdictions, EU VIES lookups, B2B domain enrichment and Ed25519-signed audit certificate PDFs.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.13.13",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6"
+  }
+}

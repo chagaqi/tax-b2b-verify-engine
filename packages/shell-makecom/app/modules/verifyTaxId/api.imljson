@@ -1,0 +1,17 @@
+{
+  "url": "/v1/verify/tax-id",
+  "method": "POST",
+  "body": {
+    "taxId": "{{parameters.taxId}}",
+    "country": "{{parameters.country}}",
+    "liveLookup": "{{parameters.liveLookup}}",
+    "certificate": "{{parameters.certificate}}",
+    "companyName": "{{parameters.companyName}}",
+    "email": "{{parameters.email}}",
+    "domain": "{{parameters.domain}}",
+    "enrich": "{{parameters.enrich}}"
+  },
+  "response": {
+    "output": "{{body}}"
+  }
+}
